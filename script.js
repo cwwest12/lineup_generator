@@ -123,13 +123,12 @@ const getMaxScorePlayer = (players) => {
 }
 
 const getMaxScorePlayers = (players, count) => {
+  const shuffledPlayers = players.sort(() = 0.5 - Math.random());
   const selectedPlayers = [];
-  const availablePlayers = JSON.parse(JSON.stringify(players));
 
-  while (selectedPlayers.length < count) {
-    const maxScorePlayer = getMaxScorePlayer(players);
-    selectedPlayers.push(maxScorePlayer);
-    availablePlayers.splice(availablePlayers.indexOf(maxScorePlayer), 1);
+  for (let i = 0; i < count; i++) {
+    const currentPlayer = getMaxScorePlayer(shuffledPlayers, selectedPlayers);
+    selectedPlayers.push(currentPlayer)
   }
 
   return selectedPlayers;
