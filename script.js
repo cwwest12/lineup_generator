@@ -124,8 +124,7 @@ const getMaxScorePlayer = (players) => {
 
 const getMaxScorePlayers = (players, count) => {
   const selectedPlayers = [];
-  const availablePlayers = [];
-  avaiablePlayers.push(players);
+  const availablePlayers = JSON.parse(JSON.stringify(players));
 
   while (selectedPlayers.length < count) {
     const maxScorePlayer = getMaxScorePlayer(players);
