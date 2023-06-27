@@ -171,6 +171,7 @@ let teamDefensesCopy = JSON.parse(JSON.stringify(teamDefenses));
 const getRandomPlayer = (players) => {
   const index = Math.floor(Math.random() * players.length);
   return players.slice(index, index + 1)[0];
+}
 
 const generateLineup = () => {
   const lineup = {};
