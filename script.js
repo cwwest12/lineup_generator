@@ -12,7 +12,7 @@ const quarterbacks = [
   { name: 'Trevor Lawrence', rank: 9, adp: 8, risk_level: 0, scheduleStrength: 4 },
   { name: 'Deshaun Watson', rank: 10, adp: 9, risk_level: 2, scheduleStrength: 3 },
   { name: 'Geno Smith', rank: 11, adp: 15, risk_level: 0, scheduleStrength: 4 },
-  { name: 'Dak Prescott', rank: 12, adp: 10.8, risk_level: 2, scheduleStrength: 3 },
+  { name: 'Dak Prescott', rank: 12, adp: 10.8, risk_level: 2, scheduleStrength: 3 }
 ];
 
 const runningBacks = [
@@ -188,6 +188,13 @@ const generateLineup = () => {
   for (let i = 0; i < 3; i++) {
     lineup.wideReceivers.push(getRandomPlayer(wideReceiversCopy));
   }
+
+  quarterbacksCopy = JSON.parse(JSON.stringify(quarterbacks));
+  runningBacksCopy = JSON.parse(JSON.stringify(runningBacks));
+  wideReceiversCopy = JSON.parse(JSON.stringify(wideReceivers));
+  tightEndsCopy = JSON.parse(JSON.stringify(tightEnds));
+  kickersCopy = JSON.parse(JSON.stringify(kickers));
+  teamDefensesCopy = JSON.parse(JSON.stringify(teamDefenses));
 
   return lineup;
 }
