@@ -124,7 +124,8 @@ const getMaxScorePlayer = (players) => {
 
 const getMaxScorePlayers = (players, count) => {
   const selectedPlayers = [];
-  const availablePlayers = players;
+  const availablePlayers = [];
+  avaiablePlayers.push(players);
 
   while (selectedPlayers.length < count) {
     const maxScorePlayer = getMaxScorePlayer(players);
