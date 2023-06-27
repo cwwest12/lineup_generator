@@ -13,7 +13,6 @@ const quarterbacks = [
   { name: 'Deshaun Watson', rank: 10, adp: 9, risk_level: 2, scheduleStrength: 3 },
   { name: 'Geno Smith', rank: 11, adp: 15, risk_level: 0, scheduleStrength: 4 },
   { name: 'Dak Prescott', rank: 12, adp: 10.8, risk_level: 2, scheduleStrength: 3 },
-  
 ];
 
 const runningBacks = [
@@ -29,7 +28,6 @@ const runningBacks = [
   { name: 'Jonathan Taylor', rank: 10, adp: 5, risk_level: 0, scheduleStrength: 2 },
   { name: 'Breece Hall', rank: 11, adp: 12.5, risk_level: 1, scheduleStrength: 5 },
   { name: 'Joe Mixon', rank: 12, adp: 19, risk_level: 0, scheduleStrength: 2 }
-  
 ];
 
 const wideReceivers = [
@@ -45,7 +43,6 @@ const wideReceivers = [
   { name: 'Jaylen Waddle', rank: 10, adp: 10.5, risk_level: 1, scheduleStrength: 4 },
   { name: 'Garret Wilson', rank: 11, adp: 10, risk_level: 1, scheduleStrength: 3 },
   { name: 'Chris Olave', rank: 12, adp: 13.5, risk_level: 1, scheduleStrength: 4 }
-  
 ];
 
 const tightEnds = [
@@ -61,7 +58,6 @@ const tightEnds = [
   { name: 'Evan Engram', rank: 10, adp: 8, risk_level: 1, scheduleStrength: 2 },
   { name: 'Tyler Higbee', rank: 11, adp: 15, risk_level: 1, scheduleStrength: 5 },
   { name: 'Chigoziem Okonkwo', rank: 12, adp: 12.5, risk_level: 2, scheduleStrength: 2 }
-  
 ];
 
 const kickers = [
@@ -77,7 +73,6 @@ const kickers = [
   { name: 'Player 10', rank: 10, adp: 30, risk_level: 0, scheduleStrength: 3 },
   { name: 'Player 9', rank: 11, adp: 22, risk_level: 0, scheduleStrength: 4 },
   { name: 'Player 10', rank: 12, adp: 30, risk_level: 0, scheduleStrength: 3 }
- 
 ];
 
 const teamDefenses = [
@@ -93,11 +88,10 @@ const teamDefenses = [
   { name: 'Chiefs', rank: 10, adp: 10.5, risk_level: 0, scheduleStrength: 4 },
   { name: 'Dolphins', rank: 11, adp: 11, risk_level: 0, scheduleStrength: 5 },
   { name: 'Broncos', rank: 12, adp: 11, risk_level: 0, scheduleStrength: 4 }
-  
 ];
 
 const getMaxScorePlayer = (players) => {
-  let maxScore = 0;
+  let maxScore = Number.NEGATIVE_INFINITY;
   let selectedPlayer;
 
   players.forEach(player => {
@@ -119,7 +113,7 @@ const getMaxScorePlayer = (players) => {
       score -= 3;
     }
 
-    if (score >= maxScore) {
+    if (score >= maxScore || selectedPlayer === undefined) {
       maxScore = score;
       selectedPlayer = player;
     }
@@ -130,11 +124,12 @@ const getMaxScorePlayer = (players) => {
 
 const getMaxScorePlayers = (players, count) => {
   const selectedPlayers = [];
+  const availablePlayers = players;
 
   while (selectedPlayers.length < count) {
     const maxScorePlayer = getMaxScorePlayer(players);
     selectedPlayers.push(maxScorePlayer);
-    //players.splice(players.indexOf(maxScorePlayer), 1);
+    availablePlayers.splice(availablePlayers.indexOf(maxScorePlayer), 1);
   }
 
   return selectedPlayers;
@@ -143,12 +138,12 @@ const getMaxScorePlayers = (players, count) => {
 
 const generateLineup = () => {
   const lineup = {
-    quarterback: getMaxScorePlayers(quarterbacks, 1),
+    quarterback: getMaxScorePlayer(quarterbacks),
     runningBacks: getMaxScorePlayers(runningBacks, 2),
     wideReceivers: getMaxScorePlayers(wideReceivers, 3),
-    tightEnd: getMaxScorePlayers(tightEnds, 1),
-    kicker: getMaxScorePlayers(kickers, 1),
-    teamDefense: getMaxScorePlayers(teamDefenses, 1)
+    tightEnd: getMaxScorePlayer(tightEnds),
+    kicker: getMaxScorePlayer(kickers),
+    teamDefense: getMaxScorePlayer(teamDefenses)
   };
 
   return lineup;
