@@ -90,21 +90,21 @@ const teamDefenses = [
   { name: 'Broncos', rank: 12, adp: 11, risk_level: 0, scheduleStrength: 4 }
 ];
 
-const getMaxScorePlayer = (players) => {
+/* let selectedPlayers = [];
+
+const getMaxScorePlayer = (players, selectedPlayers) => {
   let maxScore = Number.NEGATIVE_INFINITY;
   let selectedPlayer;
 
   players.forEach(player => {
-    let score = 0;
+    if (!selectedPlayers.includes(player)) {
+      let score = 0;
 
     if (player.scheduleStrength >= 4) {
       score++;
     }
     if (player.rank <= 5) {
-      score += 5;
-    }
-    if (player.rank > 5) {
-      score += 3;
+      score += 10;
     }
     if (player.adp - player.rank > 0) {
       score += player.adp - player.rank;
@@ -113,7 +113,7 @@ const getMaxScorePlayer = (players) => {
       score -= 3;
     }
 
-    if (score >= maxScore || selectedPlayer === undefined && !selectedPlayers.includes(player) {
+    if (score >= maxScore) {
       maxScore = score;
       selectedPlayer = player;
     }
@@ -159,7 +159,7 @@ const getMaxScorePlayers = (players, count, selectedPlayers) => {
   }
   return selected;
 }
-
+*/
 let quarterbacksCopy = JSON.parse(JSON.stringify(quarterbacks));
 let runningBacksCopy = JSON.parse(JSON.stringify(runningBacks));
 let wideReceiversCopy = JSON.parse(JSON.stringify(wideReceivers));
@@ -168,21 +168,26 @@ let kickersCopy = JSON.parse(JSON.stringify(kickers));
 let teamDefensesCopy = JSON.parse(JSON.stringify(teamDefenses));
 
 
+const getRandomPlayer = (players) => {
+  const index = Math.floor(Math.random() * players.length);
+  return players.slice(index, 1)[0];
+
 const generateLineup = () => {
-  const lineup = {
-    quarterback: getMaxScorePlayer(quarterbacksCopy),
-    runningBacks: getMaxScorePlayers(runningBacksCopy, 2),
-    wideReceivers: getMaxScorePlayers(wideReceiversCopy, 3),
-    tightEnd: getMaxScorePlayer(tightEndsCopy),
-    kicker: getMaxScorePlayer(kickersCopy),
-    teamDefense: getMaxScorePlayer(teamDefensesCopy)
-  };
-  quarterbacksCopy = JSON.parse(JSON.stringify(quarterbacks));
-  runningBacksCopy = JSON.parse(JSON.stringify(runningBacks));
-  wideReceiversCopy = JSON.parse(JSON.stringify(wideReceivers));
-  tightEndsCopy = JSON.parse(JSON.stringify(tightEnds));
-  kickersCopy = JSON.parse(JSON.stringify(kickers));
-  teamDefensesCopy = JSON.parse(JSON.stringify(teamDefenses));
+  const lineup = [];
+  
+  lineup.quarterback = getRandomPlayer(quarterbacksCopy);
+  lineup.runningBacks = [];
+  lineup.wideReceivers = [];
+  lineup.tightEnd = getRandomPlayer(tightEndsCopy);
+  lineup.kicker = getRandomPlayer(kickersCopy);
+  lineup.teamDefense = getRandomPlayer(teamDefensesCopy);
+
+  for (let i = 0; i < 2; i++) {
+    lineup.runningBacks.push(getRandomPlayer(runningBacksCopy));
+  }
+  for (let i = 0; i < 3; i++) {
+    lineup.wideReceivers.push(getRandomPlayer(wideReceiversCopy);
+  }
 
   return lineup;
 }
