@@ -143,12 +143,12 @@ const getMaxScorePlayers = (players, count) => {
 
 const generateLineup = () => {
   const lineup = {
-    quarterback: getMaxScorePlayer(quarterbacks),
+    quarterback: getMaxScorePlayers(quarterbacks, 1),
     runningBacks: getMaxScorePlayers(runningBacks, 2),
     wideReceivers: getMaxScorePlayers(wideReceivers, 3),
-    tightEnd: getMaxScorePlayer(tightEnds),
-    kicker: getMaxScorePlayer(kickers),
-    teamDefense: getMaxScorePlayer(teamDefenses),
+    tightEnd: getMaxScorePlayers(tightEnds, 1),
+    kicker: getMaxScorePlayers(kickers, 1),
+    teamDefense: getMaxScorePlayers(teamDefenses, 1)
   };
 
   return lineup;
