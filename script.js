@@ -176,12 +176,12 @@ const getRandomPlayer = (players) => {
 const generateLineup = () => {
   const lineup = {};
   
-  lineup.quarterback = getRandomPlayer(quarterbacksCopy)
-  lineup.runningBacks = []
-  lineup.wideReceivers = []
-  lineup.tightEnd = getRandomPlayer(tightEndsCopy)
-  lineup.kicker = getRandomPlayer(kickersCopy)
-  lineup.teamDefense = getRandomPlayer(teamDefensesCopy)
+  lineup.quarterback = getRandomPlayer(quarterbacksCopy);
+  lineup.runningBacks = [];
+  lineup.wideReceivers = [];
+  lineup.tightEnd = getRandomPlayer(tightEndsCopy);
+  lineup.kicker = getRandomPlayer(kickersCopy);
+  lineup.teamDefense = getRandomPlayer(teamDefensesCopy);
 
   const selectedRunningBacks = new Set();
   const selectedWideReceivers = new Set();
@@ -200,12 +200,12 @@ const generateLineup = () => {
       selectedWideReceivers.ass(player.name);
     }
   }
-
+/*
   quarterbacksCopy = JSON.parse(JSON.stringify(quarterbacks));
   tightEndsCopy = JSON.parse(JSON.stringify(tightEnds));
   kickersCopy = JSON.parse(JSON.stringify(kickers));
   teamDefensesCopy = JSON.parse(JSON.stringify(teamDefenses));
-
+*/
   return lineup;
 }
 
