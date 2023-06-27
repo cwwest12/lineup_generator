@@ -22,6 +22,8 @@ body
 }
 
 button {
+    height: 20px;
+    width: 80px;
     position: relative;
     border: none;
     background-color: rgb(68, 182, 213);
