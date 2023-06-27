@@ -186,14 +186,14 @@ const generateLineup = () => {
   const selectedRunningBacks = new Set();
   const selectedWideReceivers = new Set();
 
-  while (selectedRunningBacks.size < 2) {
+  while (selectedRunningBacks.size < 2 && runningBacksCopy > 0) {
     let player = getRandomPlayer(runningBacksCopy);
     if (!selectedRunningBacks.has(player.name)) {
       lineup.runningBacks.push(player);
       selectedRunningBacks.add(player.name);
     }
   }
-  while (selectedWideReceivers.size < 3) {
+  while (selectedWideReceivers.size < 3 && wideReceiversCopy > 0) {
     let player = getRandomPlayer(wideReceiversCopy);
     if (!selectedWideReceivers.has(player.name)) {
       lineup.wideReceivers.push(player);
