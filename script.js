@@ -183,16 +183,25 @@ const generateLineup = () => {
   lineup.kicker = getRandomPlayer(kickersCopy)
   lineup.teamDefense = getRandomPlayer(teamDefensesCopy)
 
-  for (let i = 0; i < 2; i++) {
-    lineup.runningBacks.push(getRandomPlayer(runningBacksCopy));
+  const selectedRunningBacks = new Set();
+  const selectedWideReceivers = new Set();
+
+  while (selectedRunningBacks.size < 2) {
+    let player = getRandomPlayer(runningBacksCopy);
+    if (!selectedRunningBacks.has(player.name)) {
+      lineup.runningBacks.push(player);
+      selectedRunningBacks.add(player.name);
+    }
   }
-  for (let i = 0; i < 3; i++) {
-    lineup.wideReceivers.push(getRandomPlayer(wideReceiversCopy));
+  while (selectedWideReceivers.size < 3) {
+    let player = getRandomPlayer(wideReceiversCopy);
+    if (!selectedWideReceivers.has(player.name)) {
+      lineup.wideReceivers.push(player);
+      selectedWideReceivers.ass(player.name);
+    }
   }
 
   quarterbacksCopy = JSON.parse(JSON.stringify(quarterbacks));
-  runningBacksCopy = JSON.parse(JSON.stringify(runningBacks));
-  wideReceiversCopy = JSON.parse(JSON.stringify(wideReceivers));
   tightEndsCopy = JSON.parse(JSON.stringify(tightEnds));
   kickersCopy = JSON.parse(JSON.stringify(kickers));
   teamDefensesCopy = JSON.parse(JSON.stringify(teamDefenses));
