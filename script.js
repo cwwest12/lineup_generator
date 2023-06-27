@@ -201,7 +201,7 @@ const generateLineup = () => {
     let player = getRandomPlayer(availableWideReceivers);
     if (!selectedWideReceivers.has(player.name)) {
       lineup.wideReceivers.push(player);
-      selectedWideReceivers.ass(player.name);
+      selectedWideReceivers.add(player.name);
     }
     availableWideReceivers = availableWideReceivers.filter(p => p.name !== player.name);
   }
