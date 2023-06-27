@@ -134,7 +134,7 @@ const getMaxScorePlayers = (players, count) => {
   while (selectedPlayers.length < count) {
     const maxScorePlayer = getMaxScorePlayer(players);
     selectedPlayers.push(maxScorePlayer);
-    players.splice(players.indexOf(maxScorePlayer), 1);
+    //players.splice(players.indexOf(maxScorePlayer), 1);
   }
 
   return selectedPlayers;
