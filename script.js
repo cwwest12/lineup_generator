@@ -176,29 +176,34 @@ const getRandomPlayer = (players) => {
 const generateLineup = () => {
   const lineup = {};
   
-  lineup.quarterback = getRandomPlayer(quarterbacksCopy);
-  lineup.runningBacks = [];
-  lineup.wideReceivers = [];
-  lineup.tightEnd = getRandomPlayer(tightEndsCopy);
-  lineup.kicker = getRandomPlayer(kickersCopy);
-  lineup.teamDefense = getRandomPlayer(teamDefensesCopy);
+  lineup.quarterback = getRandomPlayer(quarterbacksCopy)
+  lineup.runningBacks = []
+  lineup.wideReceivers = []
+  lineup.tightEnd = getRandomPlayer(tightEndsCopy)
+  lineup.kicker = getRandomPlayer(kickersCopy)
+  lineup.teamDefense = getRandomPlayer(teamDefensesCopy)
 
   const selectedRunningBacks = new Set();
   const selectedWideReceivers = new Set();
 
-  while (selectedRunningBacks.size < 2 && runningBacksCopy > 0) {
-    let player = getRandomPlayer(runningBacksCopy);
+  let availableRunningBacks = runningBacksCopy.length > 0 ? [...runningBacksCopy] : [];
+  let availableWideReceivers = wideReceiversCopy.length > 0 ? [...wideReceiversCopy] : [];
+
+  while (selectedRunningBacks.size < 2 && availableRunningBacks.length > 0) {
+    let player = getRandomPlayer(availableRunningBacks);
     if (!selectedRunningBacks.has(player.name)) {
       lineup.runningBacks.push(player);
       selectedRunningBacks.add(player.name);
     }
+    availableRunningBacks = availableRunningBacks.filter(p => p.name !== player.name);
   }
-  while (selectedWideReceivers.size < 3 && wideReceiversCopy > 0) {
-    let player = getRandomPlayer(wideReceiversCopy);
+  while (selectedWideReceivers.size < 3 && availableWideReceivers.length > 0) {
+    let player = getRandomPlayer(availableWideReceivers);
     if (!selectedWideReceivers.has(player.name)) {
       lineup.wideReceivers.push(player);
       selectedWideReceivers.ass(player.name);
     }
+    availableWideReceivers = availableWideReceivers.filter(p => p.name !== player.name);
   }
 /*
   quarterbacksCopy = JSON.parse(JSON.stringify(quarterbacks));
