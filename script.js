@@ -170,7 +170,7 @@ let teamDefensesCopy = JSON.parse(JSON.stringify(teamDefenses));
 
 const getRandomPlayer = (players) => {
   const index = Math.floor(Math.random() * players.length);
-  return players.slice(index, 1)[0];
+  return players.slice(index, index + 1)[0];
 
 const generateLineup = () => {
   const lineup = {};
@@ -186,7 +186,7 @@ const generateLineup = () => {
     lineup.runningBacks.push(getRandomPlayer(runningBacksCopy));
   }
   for (let i = 0; i < 3; i++) {
-    lineup.wideReceivers.push(getRandomPlayer(wideReceiversCopy);
+    lineup.wideReceivers.push(getRandomPlayer(wideReceiversCopy));
   }
 
   return lineup;
