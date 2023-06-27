@@ -156,12 +156,12 @@ const generateLineup = () => {
 
 
 const generateLineupMessage = (lineup) => {
-  const message = `Your target quarterback needs to be: ${lineup.quarterback.name}\n` +
-    `Your target running backs are: ${lineup.runningBacks.map(player => player.name).join(", ")}\n` +
-    `Your target wide receivers are: ${lineup.wideReceivers.map(player => player.name).join(", ")}\n` +
-    `Your target tight end is: ${lineup.tightEnd.name}\n` +
-    `Your target kicker is: ${lineup.kicker.name}\n` +
-    `Your target team defense is: ${lineup.teamDefense.name}`;
+  const message = `Your target quarterback needs to be: ${lineup.quarterback.name}. \n` +
+    `Your target running backs are: ${lineup.runningBacks.map(player => player.name).join(", ")}. \n` +
+    `Your target wide receivers are: ${lineup.wideReceivers.map(player => player.name).join(", ")}. \n` +
+    `Your target tight end is: ${lineup.tightEnd.name}. \n` +
+    `Your target kicker is: ${lineup.kicker.name}. \n` +
+    `Your target team defense is: ${lineup.teamDefense.name}.`;
 
   return message;
 }
