@@ -119,7 +119,7 @@ const getMaxScorePlayer = (players) => {
       score -= 3;
     }
 
-    if (score > maxScore) {
+    if (score >= maxScore) {
       maxScore = score;
       selectedPlayer = player;
     }
