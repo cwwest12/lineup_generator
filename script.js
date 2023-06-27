@@ -113,7 +113,7 @@ const getMaxScorePlayer = (players) => {
       score -= 3;
     }
 
-    if (score >= maxScore || selectedPlayer === undefined) {
+    if (score >= maxScore || selectedPlayer === undefined && !selectedPlayers.includes(player) {
       maxScore = score;
       selectedPlayer = player;
     }
