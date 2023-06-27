@@ -135,23 +135,36 @@ const getMaxScorePlayers = (players, count) => {
   return selectedPlayers;
 }
 
+let quarterbacksCopy = JSON.parse(JSON.stringify(quarterbacks));
+let runningBacksCopy = JSON.parse(JSON.stringify(runningBacks));
+let wideReceiversCopy = JSON.parse(JSON.stringify(wideReceivers));
+let tightEndsCopy = JSON.parse(JSON.stringify(tightEnds));
+let kickersCopy = JSON.parse(JSON.stringify(kickers));
+let teamDefensesCopy = JSON.parse(JSON.stringify(teamDefenses));
+
 
 const generateLineup = () => {
   const lineup = {
-    quarterback: getMaxScorePlayer(quarterbacks),
-    runningBacks: getMaxScorePlayers(runningBacks, 2),
-    wideReceivers: getMaxScorePlayers(wideReceivers, 3),
-    tightEnd: getMaxScorePlayer(tightEnds),
-    kicker: getMaxScorePlayer(kickers),
-    teamDefense: getMaxScorePlayer(teamDefenses)
+    quarterback: getMaxScorePlayer(quarterbacksCopy),
+    runningBacks: getMaxScorePlayers(runningBacksCopy, 2),
+    wideReceivers: getMaxScorePlayers(wideReceiversCopy, 3),
+    tightEnd: getMaxScorePlayer(tightEndsCopy),
+    kicker: getMaxScorePlayer(kickersCopy),
+    teamDefense: getMaxScorePlayer(teamDefensesCopy)
   };
+  quarterbacksCopy = JSON.parse(JSON.stringify(quarterbacks));
+  runningBacksCopy = JSON.parse(JSON.stringify(runningBacks));
+  wideReceiversCopy = JSON.parse(JSON.stringify(wideReceivers));
+  tightEndsCopy = JSON.parse(JSON.stringify(tightEnds));
+  kickersCopy = JSON.parse(JSON.stringify(kickers));
+  teamDefensesCopy = JSON.parse(JSON.stringify(teamDefenses));
 
   return lineup;
 }
 
 
 const generateLineupMessage = (lineup) => {
-  const message = `Your target quarterback needs to be: ${lineup.quarterback.name}. \n` +
+  const message = `Your target quarterback is: ${lineup.quarterback.name}. \n` +
     `Your target running backs are: ${lineup.runningBacks.map(player => player.name).join(", ")}. \n` +
     `Your target wide receivers are: ${lineup.wideReceivers.map(player => player.name).join(", ")}. \n` +
     `Your target tight end is: ${lineup.tightEnd.name}. \n` +
