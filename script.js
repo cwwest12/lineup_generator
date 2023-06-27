@@ -122,16 +122,42 @@ const getMaxScorePlayer = (players) => {
   return selectedPlayer;
 }
 
-const getMaxScorePlayers = (players, count) => {
-  const shuffledPlayers = players.sort(() = 0.5 - Math.random());
-  const selectedPlayers = [];
+const getMaxScorePlayers = (players, count, selectedPlayers) => {
+  const selected = [];
 
   for (let i = 0; i < count; i++) {
-    const currentPlayer = getMaxScorePlayer(shuffledPlayers, selectedPlayers);
-    selectedPlayers.push(currentPlayer)
-  }
+    let maxScore = Number.NEGATIVE_INFINITY;
+    let selectedPlayer;
 
-  return selectedPlayers;
+    players.forEach(player => {
+      if (!selectedPlayers.includes(player)) {
+        let score = 0;
+
+        if (player.scheduleStrength >= 4) {
+          score += 2;
+        }
+        if (player.rank <= 5) {
+          score += 10;
+        }
+        if (player.adp - player.rank >= 0) {
+          score += player.adp - player.rank;
+        }
+        if (player.risk_level >= 3) {
+          score -= 5;
+        }
+
+        if (score >= maxScore) {
+          maxScore = score;
+          selectedPlayer = player;
+        }
+      }
+  });
+
+  selected.push(selectedPlayer);
+  selectedPlayers.push(selectedPlayer);
+  
+  }
+  return selected;
 }
 
 let quarterbacksCopy = JSON.parse(JSON.stringify(quarterbacks));
