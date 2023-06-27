@@ -173,7 +173,7 @@ const getRandomPlayer = (players) => {
   return players.slice(index, 1)[0];
 
 const generateLineup = () => {
-  const lineup = [];
+  const lineup = {};
   
   lineup.quarterback = getRandomPlayer(quarterbacksCopy);
   lineup.runningBacks = [];
