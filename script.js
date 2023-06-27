@@ -176,12 +176,12 @@ const getRandomPlayer = (players) => {
 const generateLineup = () => {
   const lineup = {};
   
-  lineup.quarterback = getRandomPlayer(quarterbacksCopy);
-  lineup.runningBacks = [];
-  lineup.wideReceivers = [];
-  lineup.tightEnd = getRandomPlayer(tightEndsCopy);
-  lineup.kicker = getRandomPlayer(kickersCopy);
-  lineup.teamDefense = getRandomPlayer(teamDefensesCopy);
+  lineup.quarterback = getRandomPlayer(quarterbacksCopy)
+  lineup.runningBacks = []
+  lineup.wideReceivers = []
+  lineup.tightEnd = getRandomPlayer(tightEndsCopy)
+  lineup.kicker = getRandomPlayer(kickersCopy)
+  lineup.teamDefense = getRandomPlayer(teamDefensesCopy)
 
   for (let i = 0; i < 2; i++) {
     lineup.runningBacks.push(getRandomPlayer(runningBacksCopy));
