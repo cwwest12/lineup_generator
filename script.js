@@ -61,18 +61,18 @@ const tightEnds = [
 ];
 
 const kickers = [
-  { name: 'Player 9', rank: 1, adp: 22, risk_level: 0, scheduleStrength: 4 },
-  { name: 'Player 10', rank: 2, adp: 30, risk_level: 0, scheduleStrength: 3 },
-  { name: 'Player 9', rank: 3, adp: 22, risk_level: 0, scheduleStrength: 4 },
-  { name: 'Player 10', rank: 4, adp: 30, risk_level: 0, scheduleStrength: 3 },
-  { name: 'Player 9', rank: 5, adp: 22, risk_level: 0, scheduleStrength: 4 },
-  { name: 'Player 10', rank: 6, adp: 30, risk_level: 0, scheduleStrength: 3 },
-  { name: 'Player 9', rank: 7, adp: 22, risk_level: 0, scheduleStrength: 4 },
-  { name: 'Player 10', rank: 8, adp: 30, risk_level: 0, scheduleStrength: 3 },
-  { name: 'Player 9', rank: 9, adp: 22, risk_level: 0, scheduleStrength: 4 },
-  { name: 'Player 10', rank: 10, adp: 30, risk_level: 0, scheduleStrength: 3 },
-  { name: 'Player 9', rank: 11, adp: 22, risk_level: 0, scheduleStrength: 4 },
-  { name: 'Player 10', rank: 12, adp: 30, risk_level: 0, scheduleStrength: 3 }
+  { name: 'Justin Tucker', rank: 1, adp: 22, risk_level: 0, scheduleStrength: 4 },
+  { name: 'Tyler Bass', rank: 2, adp: 30, risk_level: 0, scheduleStrength: 3 },
+  { name: 'Daniel Carlson', rank: 3, adp: 22, risk_level: 0, scheduleStrength: 4 },
+  { name: 'Harrison Butker', rank: 4, adp: 30, risk_level: 0, scheduleStrength: 3 },
+  { name: 'Younghoe Koo', rank: 5, adp: 22, risk_level: 0, scheduleStrength: 4 },
+  { name: 'Nick Folk', rank: 6, adp: 30, risk_level: 0, scheduleStrength: 3 },
+  { name: 'Jason Sanders', rank: 7, adp: 22, risk_level: 0, scheduleStrength: 4 },
+  { name: 'Robbie Gould', rank: 8, adp: 30, risk_level: 0, scheduleStrength: 3 },
+  { name: 'Brandon MacManus', rank: 9, adp: 22, risk_level: 0, scheduleStrength: 4 },
+  { name: 'Ryan Succop', rank: 10, adp: 30, risk_level: 0, scheduleStrength: 3 },
+  { name: 'Matt Gay', rank: 11, adp: 22, risk_level: 0, scheduleStrength: 4 },
+  { name: 'Jake Elliott', rank: 12, adp: 30, risk_level: 0, scheduleStrength: 3 }
 ];
 
 const teamDefenses = [
@@ -240,4 +240,4 @@ const generateAndDisplayLineup = () => {
 
 // Add event listener to the generate button
 const generateButton = document.getElementById('generateButton');
-generateButton.addEventListener('click', generateAndDisplayLineup);
+generateButton.onclick = generateAndDisplayLineup;
