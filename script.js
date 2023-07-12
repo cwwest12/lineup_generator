@@ -168,10 +168,53 @@ let kickersCopy = JSON.parse(JSON.stringify(kickers));
 let teamDefensesCopy = JSON.parse(JSON.stringify(teamDefenses));
 
 
-const getRandomPlayer = (players) => {
-  const index = Math.floor(Math.random() * players.length);
-  return players.slice(index, index + 1)[0];
+const getRandomQuarterback = () => {
+  const randomIndex = Math.floor(Math.random() * quarterbacks.length);
+  return quarterbacks[randomIndex].name;
 }
+
+const getRandomRunningBacks = () => {
+  let randomRbs = [];
+  const randomIndex = Math.floor(Math.random() * runningBacks.length);
+  while (randomRbs.length < 3) {
+    randomRbs.push(runningBacks[randomIndex].name);
+    if (randomRb[0] === randomRb[1]) {
+      randomRb.pop();
+      randomRb.push(runningBacks[randomIndex].name);
+    }
+  };
+
+  const getRandomWideReceivers = () => {
+  let randomWrs = [];
+  const randomIndex = Math.floor(Math.random() * runningBacks.length);
+  while (randomWrs.length < 4) {
+    randomRbs.push(wideReceivers[randomIndex].name);
+    if (randomWr[0] === randomWr[1]) {
+      randomWr.pop();
+      randomWr.push(wideReceivers[randomIndex].name);
+    } else if (randomWr[0] === randomWr[2]) {
+      randomWr.pop();
+      randomWr.push(wideReceivers[randomIndex].name);
+    } else if (randomWr[1] === randomWr[2] {
+      randomWr.pop();
+      randomWr.push(wideReceivers[randomIndex].name);
+    }
+  };
+
+const getRandomTightEnd = () => {
+  const randomIndex = Math.floor(Math.random() * tightEnds.length);
+  return tightEnds[randomIndex].name;
+};
+
+const getRandomKicker = () => {
+  const randomIndex = Math.floor(Math.random() * kickers.length);
+  return kickers[randomIndex].name;
+};
+
+const getRandomTeamDefenses = () => {
+  const randomIndex = Math.floor(Math.random() * teamDefenses.length);
+  return teamDefenses[randomIndex].name;
+};
 
 const generateLineup = () => {
   const lineup = {};
@@ -210,7 +253,7 @@ const generateLineup = () => {
 }
 
 
-const generateLineupMessage = (lineup) => {
+/*const generateLineupMessage = (lineup) => {
   const message = `Your target quarterback is: ${lineup.quarterback.name}. \n` +
     `Your target running backs are: ${lineup.runningBacks.map(player => player.name).join(", ")}. \n` +
     `Your target wide receivers are: ${lineup.wideReceivers.map(player => player.name).join(", ")}. \n` +
@@ -219,7 +262,7 @@ const generateLineupMessage = (lineup) => {
     `Your target team defense is: ${lineup.teamDefense.name}.`;
 
   return message;
-}
+}*/
 
 const clearValue = (element) => {
   element.value = '';
@@ -231,8 +274,8 @@ const addValue = (element, input) => {
 
 // Generate lineup and message function
 const generateAndDisplayLineup = () => {
-  const lineup = generateLineup();
-  const message = generateLineupMessage(lineup);
+  /*const lineup = generateLineup();
+  const message = generateLineupMessage(lineup);*/
 
  
   const qbBox = document.getElementById('qbBox');
@@ -255,23 +298,23 @@ const generateAndDisplayLineup = () => {
   clearValue(defenseBox) = ''; // Clear previous defense
 
   const qbBox = document.getElementById('qbBox');
-  addValue(qbBox, lineup.quarterback.name); // add new quarterback
+  addValue(qbBox, getRandomQuarterback()); // add new quarterback
   const rbOneBox = document.getElementById('rbOneBox');
-  addValue(rbOneBox, lineup.runningBacks[0].name) = ''; // add new running back 2
+  addValue(rbOneBox, getRandomRunningBacks()) = ''; // add new running back 2
   const rbTwoBox = document.getElementById('rbTwoBox');
-  addValue(rbTwoBox, lineup.runningBacks[1].name) = ''; // add new running back 2
+  addValue(rbTwoBox, getRandomRunningBacks()) = ''; // add new running back 2
   const wrOneBox = document.getElementById('wrOneBox');
-  addValue(wrOneBox, lineup.wideReceivers[0].name) = ''; // add new wide receiver 1
+  addValue(wrOneBox, getRandomWideReceivers()) = ''; // add new wide receiver 1
   const wrTwoBox = document.getElementById('wrTwoBox');
-  addValue(wrTwoBox, lineup.wideReceivers[1].name) = ''; // add new wide receiver 2
+  addValue(wrTwoBox, getRandomWideReceivers()) = ''; // add new wide receiver 2
   const wrThreeBox = document.getElementById('wrThreeBox');
-  addValue(wrThreeBox, lineup.wideReceivers[2].name) = ''; // add new wide receiver 3
+  addValue(wrThreeBox, getRandomWideReceivers()) = ''; // add new wide receiver 3
   const teBox = document.getElementById('teBox');
-  addValue(teBox, lineup.tightEnd.name) = ''; // add new tight end
+  addValue(teBox, getRandomTightEnd()) = ''; // add new tight end
   const kickerBox = document.getElementById('kickerBox');
-  addValue(kickerBox, lineup.kicker.name) = ''; // add new kicker
+  addValue(kickerBox, getRandomKicker()) = ''; // add new kicker
   const defenseBox = document.getElementById('defenseBox');
-  addValue(defenseBox, lineup.teamDefense.name) = ''; // add new defense
+  addValue(defenseBox, getRandomTeamDefenses()) = ''; // add new defense
 
   /*const messageElement = document.createElement('p');
   messageElement.textContent = message;
@@ -282,4 +325,4 @@ const generateAndDisplayLineup = () => {
 
 // Add event listener to the generate button
 const generateButton = document.getElementById('generateButton');
-generateButton.onclick = generateAndDisplayLineup;
+generateButton.onclick = generateAndDisplayLineup();
