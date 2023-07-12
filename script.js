@@ -241,7 +241,7 @@ const getRandomWideReceivers = () => {
   return wideReceivers[randomIndex].name;
 };
 const randomWrsArr = [];
-while (randomWrs.length < 4) {
+while (randomWrsArr.length < 4) {
   randomRbs.push(getRandomWideReceivers());
   if (randomWrsArr[0] === randomWrsArr[1]) {
     randomWr.pop();
@@ -333,4 +333,4 @@ const defenseBox = document.getElementById('defenseBox');
 
 // Add event listener to the generate button
 const generateButton = document.getElementById('generateButton');
-generateButton.onclick = generateAndDisplayLineup();
+generateButton.onclick = generateAndDisplayLineup;
