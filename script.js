@@ -307,15 +307,15 @@ const generateAndDisplayLineup = () => {
   clearValue(kickerBox); // Clear previous kicker
   clearValue(defenseBox); // Clear previous defense
   
-  addValue(qbBox, getRandomQuarterback); // add new quarterback
-  addValue(rbOneBox, getRandomRunningBacks); // add new running back 2
-  addValue(rbTwoBox, getRandomRunningBacks); // add new running back 2
-  addValue(wrOneBox, getRandomWideReceivers); // add new wide receiver 1
-  addValue(wrTwoBox, getRandomWideReceivers); // add new wide receiver 2
-  addValue(wrThreeBox, getRandomWideReceivers); // add new wide receiver 3
-  addValue(teBox, getRandomTightEnd); // add new tight end
-  addValue(kickerBox, getRandomKicker); // add new kicker
-  addValue(defenseBox, getRandomTeamDefenses); // add new defense
+  addValue(qbBox, randomQbsArr[0]); // add new quarterback
+  addValue(rbOneBox, randomRbsArr[0]); // add new running back 2
+  addValue(rbTwoBox, randomRbsArr[1]); // add new running back 2
+  addValue(wrOneBox, randomWrsArr[0]); // add new wide receiver 1
+  addValue(wrTwoBox, randomWrsArr[1]); // add new wide receiver 2
+  addValue(wrThreeBox, randomWrsArr[2]); // add new wide receiver 3
+  addValue(teBox, randomTesArr[0]); // add new tight end
+  addValue(kickerBox, randomKickerArr[0]); // add new kicker
+  addValue(defenseBox, randomDefenseArr[0]); // add new defense
   
 };
 
