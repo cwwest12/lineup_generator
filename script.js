@@ -322,4 +322,4 @@ const generateAndDisplayLineup = () => {
 
 // Add event listener to the generate button
 const generateButton = document.getElementById('generateButton');
-generateButton.addEventListener = ('click', generateAndDisplayLineup);
+generateButton.addEventListener('click', generateAndDisplayLineup);
