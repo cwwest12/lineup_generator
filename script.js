@@ -307,18 +307,18 @@ const generateAndDisplayLineup = () => {
   clearValue(kickerBox); // Clear previous kicker
   clearValue(defenseBox); // Clear previous defense
   
-  addValue(qbBox, getRandomQuarterback()); // add new quarterback
-  addValue(rbOneBox, getRandomRunningBacks()); // add new running back 2
-  addValue(rbTwoBox, getRandomRunningBacks()); // add new running back 2
-  addValue(wrOneBox, getRandomWideReceivers()); // add new wide receiver 1
-  addValue(wrTwoBox, getRandomWideReceivers()); // add new wide receiver 2
-  addValue(wrThreeBox, getRandomWideReceivers()); // add new wide receiver 3
-  addValue(teBox, getRandomTightEnd()); // add new tight end
-  addValue(kickerBox, getRandomKicker()); // add new kicker
-  addValue(defenseBox, getRandomTeamDefenses()); // add new defense
+  addValue(qbBox, getRandomQuarterback); // add new quarterback
+  addValue(rbOneBox, getRandomRunningBacks); // add new running back 2
+  addValue(rbTwoBox, getRandomRunningBacks); // add new running back 2
+  addValue(wrOneBox, getRandomWideReceivers); // add new wide receiver 1
+  addValue(wrTwoBox, getRandomWideReceivers); // add new wide receiver 2
+  addValue(wrThreeBox, getRandomWideReceivers); // add new wide receiver 3
+  addValue(teBox, getRandomTightEnd); // add new tight end
+  addValue(kickerBox, getRandomKicker); // add new kicker
+  addValue(defenseBox, getRandomTeamDefenses); // add new defense
   
 };
 
 // Add event listener to the generate button
 const generateButton = document.getElementById('generateButton');
-generateButton.onclick = generateAndDisplayLineup();
+generateButton.onclick = generateAndDisplayLineup;
