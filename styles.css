@@ -26,7 +26,14 @@ body
 
 #lineupContainer, div {
   width: 100%;
-  height: 200px;
+  height: 800px;
+}
+
+section {
+    display: block;
+    align-items: center;
+    border: 1px solid lightBlue;
+    margin: 10px;
 }
 
 #generateButton {
