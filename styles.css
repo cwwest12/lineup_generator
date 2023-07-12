@@ -11,8 +11,8 @@ html {
 body
 {
   margin: 0;
-  align-items: center;
-  justify-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 #lineupContainer 
@@ -31,7 +31,8 @@ body
 
 section {
     display: block;
-    align-items: center;
+    align-content: center;
+    justify-content: center;
     border: 1px solid lightBlue;
     margin: 10px;
 }
