@@ -228,7 +228,7 @@ const getRandomRunningBacks = () => {
   return runningBacks[randomIndex].name;
 };
 const randomRbsArr = [];
-while (randomRbsArr.length < 3) {
+while (randomRbsArr.length < 2) {
   randomRbsArr.push(getRandomRunningBacks());
   if (randomRbsArr[0] === randomRbsArr[1]) {
     randomRbsArr.pop();
@@ -241,7 +241,7 @@ const getRandomWideReceivers = () => {
   return wideReceivers[randomIndex].name;
 };
 const randomWrsArr = [];
-while (randomWrsArr.length < 4) {
+while (randomWrsArr.length < 3) {
   randomWrsArr.push(getRandomWideReceivers());
   if (randomWrsArr[0] === randomWrsArr[1]) {
     randomWrsArr.pop();
@@ -249,7 +249,7 @@ while (randomWrsArr.length < 4) {
   } else if (randomWrsArr[0] === randomWrsArr[2]) {
     randomWrsArr.pop();
     randomWrsArr.push(getRandomWideReceivers());
-  } else if (randomWrsArr[1] === randomWrsArr[2] {
+  } else if (randomWrsArr[1] === randomWrsArr[2]) {
     randomWrsArr.pop();
     randomWrsArr.push(getRandomWideReceivers());
   }
