@@ -44,6 +44,8 @@ section {
 button {
     position: relative;
     border: none;
+    margin: 10px;
+    padding: 10px;
     height: 40px;
     width: 120px;
     background-color: rgb(68, 182, 213);
