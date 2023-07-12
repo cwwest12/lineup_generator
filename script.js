@@ -205,12 +205,7 @@ const generateLineup = () => {
     }
     availableWideReceivers = availableWideReceivers.filter(p => p.name !== player.name);
   }
-/*
-  quarterbacksCopy = JSON.parse(JSON.stringify(quarterbacks));
-  tightEndsCopy = JSON.parse(JSON.stringify(tightEnds));
-  kickersCopy = JSON.parse(JSON.stringify(kickers));
-  teamDefensesCopy = JSON.parse(JSON.stringify(teamDefenses));
-*/
+
   return lineup;
 }
 
@@ -225,17 +220,64 @@ const generateLineupMessage = (lineup) => {
 
   return message;
 }
+
+const clearValue = (element) => {
+  element.value = '';
+}
+
+const addValue = (element, input) => {
+  element.value = input;
+}
+
 // Generate lineup and message function
 const generateAndDisplayLineup = () => {
   const lineup = generateLineup();
   const message = generateLineupMessage(lineup);
 
-  const lineupContainer = document.getElementById('lineupContainer');
-  lineupContainer.textContent = ''; // Clear previous lineup
+ 
+  const qbBox = document.getElementById('qbBox');
+  clearValue(qbBox); // Clear previous quarterback
+  const rbOneBox = document.getElementById('rbOneBox');
+  clearValue(rbOneBox) = ''; // Clear previous running back 2
+  const rbTwoBox = document.getElementById('rbTwoBox');
+  clearValue(rbTwoBox) = ''; // Clear previous running back 2
+  const wrOneBox = document.getElementById('wrOneBox');
+  clearValue(wrOneBox) = ''; // Clear previous wide receiver 1
+  const wrTwoBox = document.getElementById('wrTwoBox');
+  clearValue(wrTwoBox) = ''; // Clear previous wide receiver 2
+  const wrThreeBox = document.getElementById('wrThreeBox');
+  clearValue(wrThreeBox) = ''; // Clear previous wide receiver 3
+  const teBox = document.getElementById('teBox');
+  clearValue(teBox) = ''; // Clear previous tight end
+  const kickerBox = document.getElementById('kickerBox');
+  clearValue(kickerBox) = ''; // Clear previous kicker
+  const defenseBox = document.getElementById('defenseBox');
+  clearValue(defenseBox) = ''; // Clear previous defense
 
-  const messageElement = document.createElement('p');
+  const qbBox = document.getElementById('qbBox');
+  addValue(qbBox, lineup.quarterback.name); // add new quarterback
+  const rbOneBox = document.getElementById('rbOneBox');
+  addValue(rbOneBox, lineup.runningBacks[0].name) = ''; // add new running back 2
+  const rbTwoBox = document.getElementById('rbTwoBox');
+  addValue(rbTwoBox, lineup.runningBacks[1].name) = ''; // add new running back 2
+  const wrOneBox = document.getElementById('wrOneBox');
+  addValue(wrOneBox, lineup.wideReceivers[0].name) = ''; // add new wide receiver 1
+  const wrTwoBox = document.getElementById('wrTwoBox');
+  addValue(wrTwoBox, lineup.wideReceivers[1].name) = ''; // add new wide receiver 2
+  const wrThreeBox = document.getElementById('wrThreeBox');
+  addValue(wrThreeBox, lineup.wideReceivers[2].name) = ''; // add new wide receiver 3
+  const teBox = document.getElementById('teBox');
+  addValue(teBox, lineup.tightEnd.name) = ''; // add new tight end
+  const kickerBox = document.getElementById('kickerBox');
+  addValue(kickerBox, lineup.kicker.name) = ''; // add new kicker
+  const defenseBox = document.getElementById('defenseBox');
+  addValue(defenseBox, lineup.teamDefense.name) = ''; // add new defense
+
+  /*const messageElement = document.createElement('p');
   messageElement.textContent = message;
-  lineupContainer.appendChild(messageElement);
+  lineupContainer.appendChild(messageElement);*/
+
+  
 }
 
 // Add event listener to the generate button
