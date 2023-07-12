@@ -297,15 +297,15 @@ const generateAndDisplayLineup = () => {
   const kickerBox = document.getElementById('kickerBox');
   const defenseBox = document.getElementById('defenseBox');
 
-  clearValue(qbBox) = ''; // Clear previous quarterback
-  clearValue(rbOneBox) = ''; // Clear previous running back 2
-  clearValue(rbTwoBox) = ''; // Clear previous running back 2
-  clearValue(wrOneBox) = ''; // Clear previous wide receiver 1
-  clearValue(wrTwoBox) = ''; // Clear previous wide receiver 2
-  clearValue(wrThreeBox) = ''; // Clear previous wide receiver 3
-  clearValue(teBox) = ''; // Clear previous tight end
-  clearValue(kickerBox) = ''; // Clear previous kicker
-  clearValue(defenseBox) = ''; // Clear previous defense
+  clearValue(qbBox); // Clear previous quarterback
+  clearValue(rbOneBox); // Clear previous running back 2
+  clearValue(rbTwoBox); // Clear previous running back 2
+  clearValue(wrOneBox); // Clear previous wide receiver 1
+  clearValue(wrTwoBox); // Clear previous wide receiver 2
+  clearValue(wrThreeBox); // Clear previous wide receiver 3
+  clearValue(teBox); // Clear previous tight end
+  clearValue(kickerBox); // Clear previous kicker
+  clearValue(defenseBox); // Clear previous defense
   
   addValue(qbBox, getRandomQuarterback()); // add new quarterback
   addValue(rbOneBox, getRandomRunningBacks()); // add new running back 2
