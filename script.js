@@ -285,6 +285,7 @@ const addValue = (element, input) => {
 };
 
 // Generate lineup and message function
+
 const generateAndDisplayLineup = () => {
 
   const qbBox = document.getElementById('qbBox');
@@ -319,6 +320,17 @@ const generateAndDisplayLineup = () => {
   
 };
 
+
+const qbBox = document.getElementById('qbBox');
+const rbOneBox = document.getElementById('rbOneBox');
+const rbTwoBox = document.getElementById('rbTwoBox');
+const wrOneBox = document.getElementById('wrOneBox');
+const wrTwoBox = document.getElementById('wrTwoBox');
+const wrThreeBox = document.getElementById('wrThreeBox');
+const teBox = document.getElementById('teBox');
+const kickerBox = document.getElementById('kickerBox');
+const defenseBox = document.getElementById('defenseBox');
+
 // Add event listener to the generate button
 const generateButton = document.getElementById('generateButton');
-generateButton.onclick = generateAndDisplayLineup;
+generateButton.onclick = generateAndDisplayLineup();
