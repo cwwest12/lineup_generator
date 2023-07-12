@@ -279,7 +279,7 @@ const generateAndDisplayLineup = () => {
 
  
   const qbBox = document.getElementById('qbBox');
-  clearValue(qbBox); // Clear previous quarterback
+  clearValue(qbBox) = ''; // Clear previous quarterback
   const rbOneBox = document.getElementById('rbOneBox');
   clearValue(rbOneBox) = ''; // Clear previous running back 2
   const rbTwoBox = document.getElementById('rbTwoBox');
@@ -300,28 +300,28 @@ const generateAndDisplayLineup = () => {
   const qbBox = document.getElementById('qbBox');
   addValue(qbBox, getRandomQuarterback()); // add new quarterback
   const rbOneBox = document.getElementById('rbOneBox');
-  addValue(rbOneBox, getRandomRunningBacks()) = ''; // add new running back 2
+  addValue(rbOneBox, getRandomRunningBacks()); // add new running back 2
   const rbTwoBox = document.getElementById('rbTwoBox');
-  addValue(rbTwoBox, getRandomRunningBacks()) = ''; // add new running back 2
+  addValue(rbTwoBox, getRandomRunningBacks()); // add new running back 2
   const wrOneBox = document.getElementById('wrOneBox');
-  addValue(wrOneBox, getRandomWideReceivers()) = ''; // add new wide receiver 1
+  addValue(wrOneBox, getRandomWideReceivers()); // add new wide receiver 1
   const wrTwoBox = document.getElementById('wrTwoBox');
-  addValue(wrTwoBox, getRandomWideReceivers()) = ''; // add new wide receiver 2
+  addValue(wrTwoBox, getRandomWideReceivers()); // add new wide receiver 2
   const wrThreeBox = document.getElementById('wrThreeBox');
-  addValue(wrThreeBox, getRandomWideReceivers()) = ''; // add new wide receiver 3
+  addValue(wrThreeBox, getRandomWideReceivers()); // add new wide receiver 3
   const teBox = document.getElementById('teBox');
-  addValue(teBox, getRandomTightEnd()) = ''; // add new tight end
+  addValue(teBox, getRandomTightEnd()); // add new tight end
   const kickerBox = document.getElementById('kickerBox');
-  addValue(kickerBox, getRandomKicker()) = ''; // add new kicker
+  addValue(kickerBox, getRandomKicker()); // add new kicker
   const defenseBox = document.getElementById('defenseBox');
-  addValue(defenseBox, getRandomTeamDefenses()) = ''; // add new defense
+  addValue(defenseBox, getRandomTeamDefenses()); // add new defense
 
   /*const messageElement = document.createElement('p');
   messageElement.textContent = message;
   lineupContainer.appendChild(messageElement);*/
 
   
-}
+};
 
 // Add event listener to the generate button
 const generateButton = document.getElementById('generateButton');
