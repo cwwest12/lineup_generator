@@ -242,7 +242,7 @@ const getRandomWideReceivers = () => {
 };
 const randomWrsArr = [];
 while (randomWrsArr.length < 4) {
-  randomWrs.push(getRandomWideReceivers());
+  randomWrsArr.push(getRandomWideReceivers());
   if (randomWrsArr[0] === randomWrsArr[1]) {
     randomWrsArr.pop();
     randomWrsArr.push(getRandomWideReceivers());
@@ -260,7 +260,7 @@ const getRandomTightEnd = () => {
   return tightEnds[randomIndex].name;
 };
 const randomTesArr = [];
-randomTesArr.push(randomTesArr());
+randomTesArr.push(getRandomTightEnd());
 
 const getRandomKicker = () => {
   const randomIndex = Math.floor(Math.random() * kickers.length);
@@ -322,4 +322,4 @@ const generateAndDisplayLineup = () => {
 
 // Add event listener to the generate button
 const generateButton = document.getElementById('generateButton');
-generateButton.onclick = generateAndDisplayLineup;
+generateButton.addEventListener = ('click', generateAndDisplayLineup);
