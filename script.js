@@ -237,21 +237,21 @@ while (randomRbsArr.length < 3) {
 };
 
 const getRandomWideReceivers = () => {
-  const randomIndex = Math.floor(Math.random() * runningBacks.length);
+  const randomIndex = Math.floor(Math.random() * wideReceivers.length);
   return wideReceivers[randomIndex].name;
 };
 const randomWrsArr = [];
 while (randomWrsArr.length < 4) {
-  randomRbs.push(getRandomWideReceivers());
+  randomWrs.push(getRandomWideReceivers());
   if (randomWrsArr[0] === randomWrsArr[1]) {
-    randomWr.pop();
-    randomWr.push(getRandomWideReceivers());
+    randomWrsArr.pop();
+    randomWrsArr.push(getRandomWideReceivers());
   } else if (randomWrsArr[0] === randomWrsArr[2]) {
-    randomWr.pop();
-    randomWr.push(getRandomWideReceivers());
+    randomWrsArr.pop();
+    randomWrsArr.push(getRandomWideReceivers());
   } else if (randomWrsArr[1] === randomWrsArr[2] {
-    randomWr.pop();
-    randomWr.push(getRandomWideReceivers());
+    randomWrsArr.pop();
+    randomWrsArr.push(getRandomWideReceivers());
   }
 };
 
@@ -284,19 +284,19 @@ const addValue = (element, input) => {
   element.value = input;
 };
 
+const qbBox = document.getElementById('qbBox');
+const rbOneBox = document.getElementById('rbOneBox');
+const rbTwoBox = document.getElementById('rbTwoBox');
+const wrOneBox = document.getElementById('wrOneBox');
+const wrTwoBox = document.getElementById('wrTwoBox');
+const wrThreeBox = document.getElementById('wrThreeBox');
+const teBox = document.getElementById('teBox');
+const kickerBox = document.getElementById('kickerBox');
+const defenseBox = document.getElementById('defenseBox');
+
 // Generate lineup and message function
 
 const generateAndDisplayLineup = () => {
-
-  const qbBox = document.getElementById('qbBox');
-  const rbOneBox = document.getElementById('rbOneBox');
-  const rbTwoBox = document.getElementById('rbTwoBox');
-  const wrOneBox = document.getElementById('wrOneBox');
-  const wrTwoBox = document.getElementById('wrTwoBox');
-  const wrThreeBox = document.getElementById('wrThreeBox');
-  const teBox = document.getElementById('teBox');
-  const kickerBox = document.getElementById('kickerBox');
-  const defenseBox = document.getElementById('defenseBox');
 
   clearValue(qbBox); // Clear previous quarterback
   clearValue(rbOneBox); // Clear previous running back 2
@@ -319,17 +319,6 @@ const generateAndDisplayLineup = () => {
   addValue(defenseBox, randomDefenseArr[0]); // add new defense
   
 };
-
-
-const qbBox = document.getElementById('qbBox');
-const rbOneBox = document.getElementById('rbOneBox');
-const rbTwoBox = document.getElementById('rbTwoBox');
-const wrOneBox = document.getElementById('wrOneBox');
-const wrTwoBox = document.getElementById('wrTwoBox');
-const wrThreeBox = document.getElementById('wrThreeBox');
-const teBox = document.getElementById('teBox');
-const kickerBox = document.getElementById('kickerBox');
-const defenseBox = document.getElementById('defenseBox');
 
 // Add event listener to the generate button
 const generateButton = document.getElementById('generateButton');
