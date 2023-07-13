@@ -228,7 +228,7 @@ const generateRandomPlayers = (players, count) => {
 
   for (let i = 0; i < count; i++) {
     if (availablePlayers.length === 0) {
-      availablePlayers.push(...players);
+      availablePlayers.push(...players.map(player => player.name));
     }
     const randomPlayer = getRandomPlayer(availablePlayers);
     randomPlayers.push(randomPlayer);
