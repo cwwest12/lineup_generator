@@ -238,7 +238,8 @@ const getRandomRunningBacks = () => {
 
 };
   
-const randomRbsArr = getRandomRunningBacks();
+const randomRbsArr = [];
+randomRbsArr.push(getRandomRunningBacks());
 
 
 const getRandomWideReceivers = () => {
@@ -255,8 +256,8 @@ const getRandomWideReceivers = () => {
   return randomPlayers;
 };
 
-const randomWrsArr = getRandomWideReceivers();
-
+const randomWrsArr = [];
+randomWrsArr.push(getRandomWideReceivers());
 
 const getRandomTightEnd = () => {
   const randomIndex = Math.floor(Math.random() * tightEnds.length);
