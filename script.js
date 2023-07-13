@@ -223,7 +223,7 @@ const getRandomPlayer = (players) => {
 
 
 const generateRandomPlayers = (players, count) => {
-  const availablePlayers = players.name.slice();
+  const availablePlayers = players.map(player => player.name);
   const randomPlayers = [];
 
   for (let i = 0; i < count; i++) {
@@ -250,15 +250,7 @@ const addValue = (element, input) => {
   element.value = input;
 };
 
-const qbBox = document.getElementById('qbBox');
-const rbOneBox = document.getElementById('rbOneBox');
-const rbTwoBox = document.getElementById('rbTwoBox');
-const wrOneBox = document.getElementById('wrOneBox');
-const wrTwoBox = document.getElementById('wrTwoBox');
-const wrThreeBox = document.getElementById('wrThreeBox');
-const teBox = document.getElementById('teBox');
-const kickerBox = document.getElementById('kickerBox');
-const defenseBox = document.getElementById('defenseBox');
+
 
 
 
@@ -267,11 +259,21 @@ const defenseBox = document.getElementById('defenseBox');
 const generateAndDisplayLineup = () => {
 
   const randomQbsArr = [getRandomPlayer(quarterbacks)];
-  const randomRbsArr = generateRandomPlayers(runningBacks.map(player => player.name), 2);
-  const randomWrsArr = generateRandomPlayers(wideReceivers.map(player => player.name), 3);
+  const randomRbsArr = generateRandomPlayers(runningBacks, 2);
+  const randomWrsArr = generateRandomPlayers(wideReceivers, 3);
   const randomTesArr = [getRandomPlayer(tightEnds)];
   const randomKickerArr = [getRandomPlayer(kickers)];
   const randomDefenseArr = [getRandomPlayer(teamDefenses)];
+
+  const qbBox = document.getElementById('qbBox');
+  const rbOneBox = document.getElementById('rbOneBox');
+  const rbTwoBox = document.getElementById('rbTwoBox');
+  const wrOneBox = document.getElementById('wrOneBox');
+  const wrTwoBox = document.getElementById('wrTwoBox');
+  const wrThreeBox = document.getElementById('wrThreeBox');
+  const teBox = document.getElementById('teBox');
+  const kickerBox = document.getElementById('kickerBox');
+  const defenseBox = document.getElementById('defenseBox');
 
   clearValue(qbBox); // Clear previous quarterback
   clearValue(rbOneBox); // Clear previous running back 2
