@@ -259,8 +259,8 @@ const addValue = (element, input) => {
 const generateAndDisplayLineup = () => {
 
   const randomQbsArr = [getRandomPlayer(quarterbacks)];
-  const randomRbsArr = generateRandomPlayers(runningBacks, 2);
-  const randomWrsArr = generateRandomPlayers(wideReceivers, 3);
+  const randomRbsArr = [...generateRandomPlayers(runningBacks, 2)];
+  const randomWrsArr = [...generateRandomPlayers(wideReceivers, 3)];
   const randomTesArr = [getRandomPlayer(tightEnds)];
   const randomKickerArr = [getRandomPlayer(kickers)];
   const randomDefenseArr = [getRandomPlayer(teamDefenses)];
