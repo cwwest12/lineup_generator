@@ -223,47 +223,40 @@ const getRandomQuarterback = () => {
 const randomQbsArr = [];
 randomQbsArr.push(getRandomQuarterback());
 
-const getRandomRunningBacks = (excludePlayers = []) => {
+const getRandomRunningBacks = () => {
+  let randomPlayers = [];
+  let selectedPlayers = [];
   let randomPlayer;
+  const randomIndex = Math.floor(Math.random() * runningBacks.length);
+  randomPlayer = runningBacks[randomIndex].name;
+  
   do {
-    const randomIndex = Math.floor(Math.random() * runningBacks.length);
-    randomPlayer = runningBacks[randomIndex].name;
-  } while (excludePlayers.includes(randomPlayer));
-    
-  return randomPlayer;
+    randomPlayers.push(randomPlayer);
+  } while (randomPlayers.length < 3 && !selectedPlayers.includes(randomPlayer))
+  
+  return randomPlayers;
+
 };
-const randomRbsArr = [];
-while (randomRbsArr.length < 2) {
-  randomRbsArr.push(getRandomRunningBacks());
-  if (randomRbsArr[0] === randomRbsArr[1]) {
-    randomRbsArr.pop();
-    randomRbsArr.push(getRandomRunningBacks());
-  }
+  
+const randomRbsArr = getRandomRunningBacks();
+
+
+const getRandomWideReceivers = () => {
+  let randomPlayers = [];
+  let selectedPlayers = [];
+  let randomPlayer;
+  const randomIndex = Math.floor(Math.random() * wideReceivers.length);
+  randomPlayer = wideReceivers[randomIndex].name;
+
+  do {
+    randomPlayers.push(randomPlayer);
+  } while (randomPlayers.length < 4 && !selectedPlayers.includes(randomPlayer))
+  
+  return randomPlayers;
 };
 
-const getRandomWideReceivers = (excludePlayers = []) => {
-  let randomPlayer;
-  do {
-    const randomIndex = Math.floor(Math.random() * wideReceivers.length);
-    randomPlayer = wideReceivers[randomIndex].name;
-  } while (excludePlayers.includes(randomPlayer))
-  
-  return randomPlayer;
-};
-const randomWrsArr = [];
-while (randomWrsArr.length < 3) {
-  randomWrsArr.push(getRandomWideReceivers());
-  if (randomWrsArr[0] === randomWrsArr[1]) {
-    randomWrsArr.pop();
-    randomWrsArr.push(getRandomWideReceivers());
-  } else if (randomWrsArr[0] === randomWrsArr[2]) {
-    randomWrsArr.pop();
-    randomWrsArr.push(getRandomWideReceivers());
-  } else if (randomWrsArr[1] === randomWrsArr[2]) {
-    randomWrsArr.pop();
-    randomWrsArr.push(getRandomWideReceivers());
-  }
-};
+const randomWrsArr = getRandomWideReceivers();
+
 
 const getRandomTightEnd = () => {
   const randomIndex = Math.floor(Math.random() * tightEnds.length);
@@ -318,15 +311,15 @@ const generateAndDisplayLineup = () => {
   clearValue(kickerBox); // Clear previous kicker
   clearValue(defenseBox); // Clear previous defense
   
-  addValue(qbBox, getRandomQuarterback()); // add new quarterback
-  addValue(rbOneBox, getRandomRunningBacks(); // add new running back 2
-  addValue(rbTwoBox, getRandomRunningBacks(randomRbsArr[1])); // add new running back 2
-  addValue(wrOneBox, getRandomWideReceivers()); // add new wide receiver 1
-  addValue(wrTwoBox, getRandomWideReceivers(randomWrsArr[1])); // add new wide receiver 2
-  addValue(wrThreeBox, getRandomWideReceivers(randomWrsArr[1], randomWrsArr[2]); // add new wide receiver 3
-  addValue(teBox, getRandomTightEnd()); // add new tight end
-  addValue(kickerBox, getRandomKicker()); // add new kicker
-  addValue(defenseBox, getRandomTeamDefense()); // add new defense
+  addValue(qbBox, randomQbsArr[0]); // add new quarterback
+  addValue(rbOneBox, randomRbsArr[0]); // add new running back 2
+  addValue(rbTwoBox, randomRbsArr[1]); // add new running back 2
+  addValue(wrOneBox, randomWrsArr[0]); // add new wide receiver 1
+  addValue(wrTwoBox, randomWrsArr[1]); // add new wide receiver 2
+  addValue(wrThreeBox, randomWrsArr[2]); // add new wide receiver 3
+  addValue(teBox, randomTesArr[0]); // add new tight end
+  addValue(kickerBox, randomKickerArr[0]); // add new kicker
+  addValue(defenseBox, randomDefenseArr[0]); // add new defense
   
 };
 
