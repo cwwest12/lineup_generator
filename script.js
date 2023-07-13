@@ -223,9 +223,14 @@ const getRandomQuarterback = () => {
 const randomQbsArr = [];
 randomQbsArr.push(getRandomQuarterback());
 
-const getRandomRunningBacks = () => {
-  const randomIndex = Math.floor(Math.random() * runningBacks.length);
-  return runningBacks[randomIndex].name;
+const getRandomRunningBacks = (excludePlayers = []) => {
+  let randomPlayer;
+  do {
+    const randomIndex = Math.floor(Math.random() * runningBacks.length);
+    randomPlayer = runningBacks[randomIndex].name;
+  } while (excludePlayers.includes(randomPlayer));
+    
+  return randomPlayer;
 };
 const randomRbsArr = [];
 while (randomRbsArr.length < 2) {
@@ -236,9 +241,14 @@ while (randomRbsArr.length < 2) {
   }
 };
 
-const getRandomWideReceivers = () => {
-  const randomIndex = Math.floor(Math.random() * wideReceivers.length);
-  return wideReceivers[randomIndex].name;
+const getRandomWideReceivers = (excludePlayers = []) => {
+  let randomPlayer;
+  do {
+    const randomIndex = Math.floor(Math.random() * wideReceivers.length);
+    randomPlayer = wideReceivers[randomIndex].name;
+  } while (excludePlayers.includes(randomPlayer))
+  
+  return randomPlayer;
 };
 const randomWrsArr = [];
 while (randomWrsArr.length < 3) {
@@ -269,12 +279,12 @@ const getRandomKicker = () => {
 const randomKickerArr = [];
 randomKickerArr.push(getRandomKicker());
 
-const getRandomTeamDefenses = () => {
+const getRandomTeamDefense = () => {
   const randomIndex = Math.floor(Math.random() * teamDefenses.length);
   return teamDefenses[randomIndex].name;
 };
 const randomDefenseArr = [];
-randomDefenseArr.push(getRandomTeamDefenses());
+randomDefenseArr.push(getRandomTeamDefense());
 
 const clearValue = (element) => {
   element.value = '';
@@ -308,15 +318,15 @@ const generateAndDisplayLineup = () => {
   clearValue(kickerBox); // Clear previous kicker
   clearValue(defenseBox); // Clear previous defense
   
-  addValue(qbBox, randomQbsArr[0]); // add new quarterback
-  addValue(rbOneBox, randomRbsArr[0]); // add new running back 2
-  addValue(rbTwoBox, randomRbsArr[1]); // add new running back 2
-  addValue(wrOneBox, randomWrsArr[0]); // add new wide receiver 1
-  addValue(wrTwoBox, randomWrsArr[1]); // add new wide receiver 2
-  addValue(wrThreeBox, randomWrsArr[2]); // add new wide receiver 3
-  addValue(teBox, randomTesArr[0]); // add new tight end
-  addValue(kickerBox, randomKickerArr[0]); // add new kicker
-  addValue(defenseBox, randomDefenseArr[0]); // add new defense
+  addValue(qbBox, getRandomQuarterback()); // add new quarterback
+  addValue(rbOneBox, getRandomRunningBacks(); // add new running back 2
+  addValue(rbTwoBox, getRandomRunningBacks(randomRbsArr[1])); // add new running back 2
+  addValue(wrOneBox, getRandomWideReceivers()); // add new wide receiver 1
+  addValue(wrTwoBox, getRandomWideReceivers(randomWrsArr[1])); // add new wide receiver 2
+  addValue(wrThreeBox, getRandomWideReceivers(randomWrsArr[1], randomWrsArr[2]); // add new wide receiver 3
+  addValue(teBox, getRandomTightEnd()); // add new tight end
+  addValue(kickerBox, getRandomKicker()); // add new kicker
+  addValue(defenseBox, getRandomTeamDefense()); // add new defense
   
 };
 
