@@ -223,7 +223,7 @@ const getRandomPlayer = (players) => {
 
 
 const generateRandomPlayers = (players, count) => {
-  const availablePlayers = players.slice();
+  const availablePlayers = players.name.slice();
   const randomPlayers = [];
 
   for (let i = 0; i < count; i++) {
@@ -233,7 +233,7 @@ const generateRandomPlayers = (players, count) => {
     const randomPlayer = getRandomPlayer(availablePlayers);
     randomPlayers.push(randomPlayer);
 
-    const playerIndex = availablePlayers.findIndex(player => player.name === randomPlayer);
+    const playerIndex = availablePlayers.findIndex(player => player === randomPlayer);
     availablePlayers.splice(playerIndex, 1);
   }
 
@@ -261,8 +261,8 @@ const kickerBox = document.getElementById('kickerBox');
 const defenseBox = document.getElementById('defenseBox');
 
 const randomQbsArr = [getRandomPlayer(quarterbacks)];
-const randomRbsArr = [generateRandomPlayers(runningBacks, 2)];
-const randomWrsArr = [generateRandomPlayers(wideReceivers, 3)];
+const randomRbsArr = generateRandomPlayers(runningBacks.map(player => player.name), 2);
+const randomWrsArr = generateRandomPlayers(wideReceivers.map(player => player.name), 3);
 const randomTesArr = [getRandomPlayer(tightEnds)];
 const randomKickerArr = [getRandomPlayer(kickers)];
 const randomDefenseArr = [getRandomPlayer(teamDefenses)];
@@ -270,8 +270,6 @@ const randomDefenseArr = [getRandomPlayer(teamDefenses)];
 // Generate lineup and message function
 
 const generateAndDisplayLineup = () => {
-
-  
 
   clearValue(qbBox); // Clear previous quarterback
   clearValue(rbOneBox); // Clear previous running back 2
