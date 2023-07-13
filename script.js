@@ -230,11 +230,11 @@ const generateRandomPlayers = (players, count) => {
     if (availablePlayers.length === 0) {
       availablePlayers.push(...players.map(player => player.name));
     }
-    const randomPlayer = getRandomPlayer(availablePlayers);
+    const randomPlayerIndex = Math.floor(Math.random() * available.Players.length);
+    const randomPlayer = availablePlayers[randomPlayerIndex];
     randomPlayers.push(randomPlayer);
 
-    const playerIndex = availablePlayers.findIndex(player => player === randomPlayer);
-    availablePlayers.splice(playerIndex, 1);
+    availablePlayers.splice(randomPlayerIndex, 1);
   }
 
   return randomPlayers;
