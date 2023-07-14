@@ -222,7 +222,7 @@ const getRandomPlayer = (players) => {
 };
 
 
-const generateRandomPlayers = (players, count) => {
+/*const generateRandomPlayers = (players, count) => {
   const availablePlayers = players.map(player => player.name);
   const randomPlayers = [];
 
@@ -230,7 +230,7 @@ const generateRandomPlayers = (players, count) => {
     if (availablePlayers.length === 0) {
       availablePlayers.push(...players.map(player => player.name));
     }
-    const randomPlayerIndex = Math.floor(Math.random() * available.Players.length);
+    const randomPlayerIndex = Math.floor(Math.random() * availablePlayers.length);
     const randomPlayer = availablePlayers[randomPlayerIndex];
     randomPlayers.push(randomPlayer);
 
@@ -239,6 +239,24 @@ const generateRandomPlayers = (players, count) => {
 
   return randomPlayers;
 };
+*/
+const generateRandomPlayers = (players, count) => {
+  const availablePlayers = [];
+  for (let i = 0; i < players.length; i++) {
+    availablePlayers.push(players[i].name)
+  }
+  const randomIndex = Math.floor(Math.random() * availablePlayers.length);
+  const randomPlayers = [];
+
+  if (availablePlayers.length < count + 1) {
+    randomPlayers.push(availablePlayers[randomIndex]);
+    availablePlayers.splice(randomIndex, 1);
+  }
+
+  return randomPlayers;
+
+}
+  
   
 
 
