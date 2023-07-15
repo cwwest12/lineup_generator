@@ -246,11 +246,12 @@ const generateRandomPlayers = (players, count) => {
     availablePlayers.push(players[i].name)
   }
   const randomIndex = Math.floor(Math.random() * availablePlayers.length);
+  let randomPlayer = availablePlayers[randomIndex];
   const randomPlayers = [];
 
   if (availablePlayers.length < count + 1) {
-    randomPlayers.push(availablePlayers[randomIndex]);
-    availablePlayers.splice(randomIndex, 1);
+    randomPlayers.push(randomPlayer);
+    availablePlayers.pop(randomPlayer);
   }
 
   return randomPlayers;
