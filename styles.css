@@ -30,9 +30,9 @@ body {
 }
 
 section {
-    display: block;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-items: center;
     border: 1px solid lightBlue;
     margin: 10px;
 }
