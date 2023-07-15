@@ -240,6 +240,7 @@ const getRandomPlayer = (players) => {
   return randomPlayers;
 };
 */
+
 const generateRandomPlayers = (players, count) => {
   const availablePlayers = [];
   const randomPlayers = [];
@@ -247,12 +248,15 @@ const generateRandomPlayers = (players, count) => {
   for (let i = 0; i < players.length; i++) {
     availablePlayers.push(players[i].name)
   }
-  const randomIndex = Math.floor(Math.random() * availablePlayers.length);
-  let randomPlayer = availablePlayers[randomIndex];
+
+  let j = 0;
   
-  while (j < count + 1) {
+  while (j < count) {
+    const randomIndex = Math.floor(Math.random() * availablePlayers.length);
+    let randomPlayer = availablePlayers[randomIndex];
+    
     randomPlayers.push(randomPlayer);
-    availablePlayers.filter(item => item !== randomPlayer);
+    availablePlayers.splice(randomIndex, 1);
     j++;
   }
   
