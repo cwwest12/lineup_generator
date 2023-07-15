@@ -283,8 +283,8 @@ const addValue = (element, input) => {
 const generateAndDisplayLineup = () => {
 
   const randomQbsArr = [getRandomPlayer(quarterbacks)];
-  const randomRbsArr = [generateRandomPlayers(runningBacks, 2)];
-  const randomWrsArr = [generateRandomPlayers(wideReceivers, 3)];
+  const randomRbsArr = generateRandomPlayers(runningBacks, 2);
+  const randomWrsArr = generateRandomPlayers(wideReceivers, 3);
   const randomTesArr = [getRandomPlayer(tightEnds)];
   const randomKickerArr = [getRandomPlayer(kickers)];
   const randomDefenseArr = [getRandomPlayer(teamDefenses)];
@@ -310,7 +310,7 @@ const generateAndDisplayLineup = () => {
   clearValue(defenseBox); // Clear previous defense
   
   addValue(qbBox, randomQbsArr[0]); // add new quarterback
-  addValue(rbOneBox, randomRbsArr[0]); // add new running back 2
+  addValue(rbOneBox, randomRbsArr[0]); // add new running back 1
   addValue(rbTwoBox, randomRbsArr[1]); // add new running back 2
   addValue(wrOneBox, randomWrsArr[0]); // add new wide receiver 1
   addValue(wrTwoBox, randomWrsArr[1]); // add new wide receiver 2
