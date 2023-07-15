@@ -34,26 +34,23 @@ section {
 }
 
 img {
-    max-width: 50px;
+    max-width: 40px;
     height: auto;
-    margin: 10px;
+    margin: 5px;
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px;
+    height: 40px;
+    width: auto;
 }
 
 #generateButton {
     height: 40px;
     width: 120px;
-}
-
-button {
-    position: relative;
-    border: none;
-    margin: 20px;
-    padding: 10px;
-    height: 40px;
-    width: auto;
-    background-color: rgb(68, 182, 213);
-    transition: .2s ease-in;
-    z-index: 1;
 }
 
 button::before,
