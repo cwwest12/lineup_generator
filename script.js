@@ -248,11 +248,10 @@ const generateRandomPlayers = (players, count) => {
   const randomIndex = Math.floor(Math.random() * availablePlayers.length);
   let randomPlayer = availablePlayers[randomIndex];
   const randomPlayers = [];
-
-  if (availablePlayers.length < count + 1) {
+  do {
     randomPlayers.push(randomPlayer);
-    availablePlayers.pop(randomPlayer);
-  }
+    availablePlayers.filter(item => item !== randomPlayer);
+  } while (randomPlayers.length < count + 1);
 
   return randomPlayers;
 
