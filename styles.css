@@ -8,8 +8,7 @@ html {
   background-color: lightblue;
   color: black;
 
-body
-{
+body {
   margin: auto;
   display: flex;
   align-items: center;
