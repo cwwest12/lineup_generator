@@ -41,6 +41,8 @@ section {
 img {
     max-width: 30px;
     height: auto;
+    padding: 0 10px;
+    margin: 0 10px;
 }
 
 #generateButton {
