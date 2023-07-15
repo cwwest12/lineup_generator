@@ -37,6 +37,11 @@ section {
     margin: 10px;
 }
 
+img {
+    height: 30px;
+    width: 30px;
+}
+
 #generateButton {
     height: 40px;
     width: 120px;
