@@ -1,7 +1,5 @@
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
+* {
+  border: 1px solid red;
 }
 
 html {
@@ -38,9 +36,8 @@ section {
 }
 
 img {
-    max-width: 30px;
+    max-width: 50px;
     height: auto;
-    padding: 0 10px;
     margin: 0 10px;
 }
 
