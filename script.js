@@ -321,6 +321,95 @@ const generateAndDisplayLineup = () => {
   
 };
 
+/*
+const rollbackImg = (element) => {
+  element.src = './nfl-nike-logo-logodownload-download-logotipos-21.png';
+}
+
+const newImg = (element, url) => {
+  element.src = url;
+}
+
+const findUrl = (player) => {
+
+  let url;
+  
+  switch (player) {
+    case 'Josh Allen':
+      url = '';
+      break;
+
+    case 'Josh Allen':
+      url = '';
+      break;
+
+    case 'Josh Allen':
+      url = '';
+      break;
+
+    case 'Josh Allen':
+      url = '';
+      break;
+
+    case 'Josh Allen':
+      url = '';
+      break;
+
+    case 'Josh Allen':
+      url = '';
+      break;
+
+    case 'Josh Allen':
+      url = '';
+      break;
+
+    case 'Josh Allen':
+      url = '';
+      break;
+
+    case 'Josh Allen':
+      url = '';
+      break;
+
+    case 'Josh Allen':
+      url = '';
+      break;
+
+    case 'Josh Allen':
+      url = '';
+      break;
+
+    case 'Josh Allen':
+      url = '';
+      break;
+   
+
+const changeImage = () => {
+  
+  const qbBoxImg = document.getElementById('qbBoxImg');
+  const rbBoxOneImg = document.getElementById('rbBoxOneImg');
+  const rbBoxTwoImg = document.getElementById('rbBoxTwoImg');
+  const wrBoxOneImg = document.getElementById('wrBoxOneImg');
+  const wrBoxTwoImg = document.getElementById('wrBoxTwoImg');
+  const wrBoxThreeImg = document.getElementById('wrBoxThreeImg');
+  const teBoxImg = document.getElementById('teBoxImg');
+  const kickerBoxImg = document.getElementById('kickerBoxImg');
+  const defenseBoxImg = document.getElementById('defenseBoxImg');
+
+  rollbackImg(qbBoxImg);
+  rollbackImg(rbBoxOneImg);
+  rollbackImg(rbBoxTwoImg);
+  rollbackImg(wrBoxOneImg);
+  rollbackImg(wrBoxTwoImg);
+  rollbackImg(wrBoxThreeImg);
+  rollbackImg(teBoxImg);
+  rollbackImg(kickerBoxImg);
+  rollbackImg(defenseBoxImg);
+}
+*/
+  
+  
+
 // Add event listener to the generate button
 const generateButton = document.getElementById('generateButton');
 generateButton.addEventListener('click', generateAndDisplayLineup);
