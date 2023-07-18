@@ -264,7 +264,7 @@ const generateRandomPlayers = (players, count) => {
 }
   
   
-
+//player name changing functions
 
 const clearValue = (element) => {
   element.value = '';
@@ -274,11 +274,207 @@ const addValue = (element, input) => {
   element.value = input;
 };
 
+//image changing functions
+
+const rollbackImg = (element) => {
+  element.src = './nfl-nike-logo-logodownload-download-logotipos-21.png';
+}
+
+const newImg = (element, url) => {
+  element.src = url;
+}
+
+//find quarterback url for logo update
+
+const findQbUrl = (player) => {
+
+  let url;
+  
+  switch (player) {
+    case 'Josh Allen':
+      url = '';
+      break;
+
+    case 'Patrick Mahomes':
+      url = '';
+      break;
+
+    case 'Jalen Hurts':
+      url = '';
+      break;
+
+    case 'Lamar Jackson':
+      url = '';
+      break;
+
+    case 'Joe Burrow':
+      url = '';
+      break;
+
+    case 'Justin Herbert':
+      url = '';
+      break;
+
+    case 'Justin Fields':
+      url = '';
+      break;
+
+    case 'Daniel Jones':
+      url = '';
+      break;
+
+    case 'Trevor Lawrence':
+      url = '';
+      break;
+
+    case 'Deshaun Watson':
+      url = '';
+      break;
+
+    case 'Geno Smith':
+      url = '';
+      break;
+
+    case 'Dak Prescott':
+      url = '';
+      break;
+
+    default:
+      url = './nfl-nike-logo-logodownload-download-logotipos-21.png'
+      break;
+    }
+    
+    return url;
+  }
+
+//find running back url for logo
+
+const findRbUrl = (player) => {
+
+  let url;
+  
+  switch (player) {
+    case 'Christian McCaffrey':
+      url = '';
+      break;
+
+    case 'Austin Ekeler':
+      url = '';
+      break;
+
+    case 'Josh Jacobs':
+      url = '';
+      break;
+
+    case 'Nick Chubb':
+      url = '';
+      break;
+
+    case 'Derrick Henry':
+      url = '';
+      break;
+
+    case 'Tony Pollard':
+      url = '';
+      break;
+
+    case 'Saquon Barkley':
+      url = '';
+      break;
+
+    case 'Bijan Robinson':
+      url = '';
+      break;
+
+    case 'Rhamondre Stevenson':
+      url = '';
+      break;
+
+    case 'Jonathon Taylor':
+      url = '';
+      break;
+
+    case 'Breece Hall':
+      url = '';
+      break;
+
+    case 'Joe Mixon':
+      url = '';
+      break;
+
+    default:
+      url = './nfl-nike-logo-logodownload-download-logotipos-21.png'
+      break;
+    }
+    
+    return url;
+  }
+
+//find wide receiver url for logo
+
+const findWrUrl = (player) => {
+
+  let url;
+  
+  switch (player) {
+    case 'Justin Jefferson':
+      url = '';
+      break;
+
+    case 'Cooper Kupp':
+      url = '';
+      break;
+
+    case 'Ja\'Marr Chase':
+      url = '';
+      break;
+
+    case 'Nick Chubb':
+      url = '';
+      break;
+
+    case 'Derrick Henry':
+      url = '';
+      break;
+
+    case 'Tony Pollard':
+      url = '';
+      break;
+
+    case 'Saquon Barkley':
+      url = '';
+      break;
+
+    case 'Bijan Robinson':
+      url = '';
+      break;
+
+    case 'Rhamondre Stevenson':
+      url = '';
+      break;
+
+    case 'Jonathon Taylor':
+      url = '';
+      break;
+
+    case 'Breece Hall':
+      url = '';
+      break;
+
+    case 'Joe Mixon':
+      url = '';
+      break;
+
+    default:
+      url = './nfl-nike-logo-logodownload-download-logotipos-21.png'
+      break;
+    }
+    
+    return url;
+  }
 
 
-
-
-// Generate lineup and message function
+// Generate lineup and image function
 
 const generateAndDisplayLineup = () => {
 
@@ -318,74 +514,9 @@ const generateAndDisplayLineup = () => {
   addValue(teBox, randomTesArr[0]); // add new tight end
   addValue(kickerBox, randomKickerArr[0]); // add new kicker
   addValue(defenseBox, randomDefenseArr[0]); // add new defense
-  
-};
 
-/*
-const rollbackImg = (element) => {
-  element.src = './nfl-nike-logo-logodownload-download-logotipos-21.png';
-}
+  //image changing
 
-const newImg = (element, url) => {
-  element.src = url;
-}
-
-const findUrl = (player) => {
-
-  let url;
-  
-  switch (player) {
-    case 'Josh Allen':
-      url = '';
-      break;
-
-    case 'Josh Allen':
-      url = '';
-      break;
-
-    case 'Josh Allen':
-      url = '';
-      break;
-
-    case 'Josh Allen':
-      url = '';
-      break;
-
-    case 'Josh Allen':
-      url = '';
-      break;
-
-    case 'Josh Allen':
-      url = '';
-      break;
-
-    case 'Josh Allen':
-      url = '';
-      break;
-
-    case 'Josh Allen':
-      url = '';
-      break;
-
-    case 'Josh Allen':
-      url = '';
-      break;
-
-    case 'Josh Allen':
-      url = '';
-      break;
-
-    case 'Josh Allen':
-      url = '';
-      break;
-
-    case 'Josh Allen':
-      url = '';
-      break;
-   
-
-const changeImage = () => {
-  
   const qbBoxImg = document.getElementById('qbBoxImg');
   const rbBoxOneImg = document.getElementById('rbBoxOneImg');
   const rbBoxTwoImg = document.getElementById('rbBoxTwoImg');
@@ -405,9 +536,9 @@ const changeImage = () => {
   rollbackImg(teBoxImg);
   rollbackImg(kickerBoxImg);
   rollbackImg(defenseBoxImg);
-}
-*/
   
+};
+
   
 
 // Add event listener to the generate button
