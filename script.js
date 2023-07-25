@@ -292,51 +292,51 @@ const findQbUrl = (player) => {
   
   switch (player) {
     case 'Josh Allen':
-      url = '';
+      url = './bills.png';
       break;
 
     case 'Patrick Mahomes':
-      url = '';
+      url = './chiefs.png';
       break;
 
     case 'Jalen Hurts':
-      url = '';
+      url = './philadelphia-eagles-logo.png';
       break;
 
     case 'Lamar Jackson':
-      url = '';
+      url = './ravens.png';
       break;
 
     case 'Joe Burrow':
-      url = '';
+      url = './bengals.png';
       break;
 
     case 'Justin Herbert':
-      url = '';
+      url = './chargers.png';
       break;
 
     case 'Justin Fields':
-      url = '';
+      url = './bears.png';
       break;
 
     case 'Daniel Jones':
-      url = '';
+      url = './giants.png';
       break;
 
     case 'Trevor Lawrence':
-      url = '';
+      url = './jaguars.png';
       break;
 
     case 'Deshaun Watson':
-      url = '';
+      url = './browns.png';
       break;
 
     case 'Geno Smith':
-      url = '';
+      url = './seahawks.png';
       break;
 
     case 'Dak Prescott':
-      url = '';
+      url = './cowboys.png';
       break;
 
     default:
@@ -355,51 +355,51 @@ const findRbUrl = (player) => {
   
   switch (player) {
     case 'Christian McCaffrey':
-      url = '';
+      url = './49ers.png';
       break;
 
     case 'Austin Ekeler':
-      url = '';
+      url = './chargers.png';
       break;
 
     case 'Josh Jacobs':
-      url = '';
+      url = './raiders.png';
       break;
 
     case 'Nick Chubb':
-      url = '';
+      url = './browns.png';
       break;
 
     case 'Derrick Henry':
-      url = '';
+      url = './titans.png';
       break;
 
     case 'Tony Pollard':
-      url = '';
+      url = './cowboys.png';
       break;
 
     case 'Saquon Barkley':
-      url = '';
+      url = './giants.png';
       break;
 
     case 'Bijan Robinson':
-      url = '';
+      url = './falcons.png';
       break;
 
     case 'Rhamondre Stevenson':
-      url = '';
+      url = './patriots.png';
       break;
 
     case 'Jonathon Taylor':
-      url = '';
+      url = './colts.png';
       break;
 
     case 'Breece Hall':
-      url = '';
+      url = './jets.png';
       break;
 
     case 'Joe Mixon':
-      url = '';
+      url = './bengals.png';
       break;
 
     default:
@@ -418,26 +418,26 @@ const findWrUrl = (player) => {
   
   switch (player) {
     case 'Justin Jefferson':
-      url = '';
+      url = './vikings.png';
       break;
 
     case 'Cooper Kupp':
-      url = '';
+      url = './rams.png';
       break;
 
     case 'Ja\'Marr Chase':
+      url = './bengals.png';
+      break;
+
+    case 'Tyreek Hill':
+      url = './dolphins.png';
+      break;
+
+    case 'Stefon Diggs':
       url = '';
       break;
 
-    case 'Nick Chubb':
-      url = '';
-      break;
-
-    case 'Derrick Henry':
-      url = '';
-      break;
-
-    case 'Tony Pollard':
+    case 'A.J. Brown':
       url = '';
       break;
 
