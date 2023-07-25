@@ -274,11 +274,398 @@ const addValue = (element, input) => {
   element.value = input;
 };
 
+
+
+
+
+
+
+//find quarterback url for logo update
+
+const findQbUrl = (player) => {
+
+  let url;
+  
+  switch (player) {
+    case 'Josh Allen':
+      url = "./bills.png";
+      break;
+
+    case 'Patrick Mahomes':
+      url = "./chiefs.png";
+      break;
+
+    case 'Jalen Hurts':
+      url = "./philadelphia-eagles-logo.png";
+      break;
+
+    case 'Lamar Jackson':
+      url = "./ravens.png";
+      break;
+
+    case 'Joe Burrow':
+      url = "./bengals.png";
+      break;
+
+    case 'Justin Herbert':
+      url = "./chargers.png";
+      break;
+
+    case 'Justin Fields':
+      url = "./bears.png";
+      break;
+
+    case 'Daniel Jones':
+      url = "./giants.png";
+      break;
+
+    case 'Trevor Lawrence':
+      url = "./jaguars.png";
+      break;
+
+    case 'Deshaun Watson':
+      url = "./browns.png";
+      break;
+
+    case 'Geno Smith':
+      url = "./seahawks.png";
+      break;
+
+    case 'Dak Prescott':
+      url = "./cowboys.png";
+      break;
+
+    default:
+      url = "./nfl-nike-logo-logodownload-download-logotipos-21.png";
+      break;
+    }
+    
+    return url;
+  }
+
+//find running back url for logo
+
+const findRbUrl = (player) => {
+
+  let url;
+  
+  switch (player) {
+    case 'Christian McCaffrey':
+      url = "./49ers.png";
+      break;
+
+    case 'Austin Ekeler':
+      url = "./chargers.png";
+      break;
+
+    case 'Josh Jacobs':
+      url = "./raiders.png";
+      break;
+
+    case 'Nick Chubb':
+      url = "./browns.png";
+      break;
+
+    case 'Derrick Henry':
+      url = "./titans.png";
+      break;
+
+    case 'Tony Pollard':
+      url = "./cowboys.png";
+      break;
+
+    case 'Saquon Barkley':
+      url = "./giants.png";
+      break;
+
+    case 'Bijan Robinson':
+      url = "./falcons.png";
+      break;
+
+    case 'Rhamondre Stevenson':
+      url = "./patriots.png";
+      break;
+
+    case 'Jonathon Taylor':
+      url = "./colts.png";
+      break;
+
+    case 'Breece Hall':
+      url = "./jets.png";
+      break;
+
+    case 'Joe Mixon':
+      url = "./bengals.png";
+      break;
+
+    default:
+      url = "./nfl-nike-logo-logodownload-download-logotipos-21.png";
+      break;
+    }
+    
+    return url;
+  }
+
+//find wide receiver url for logo
+
+const findWrUrl = (player) => {
+
+  let url;
+  
+  switch (player) {
+    case 'Justin Jefferson':
+      url = "./vikings.png";
+      break;
+
+    case 'Cooper Kupp':
+      url = "./rams.png";
+      break;
+
+    case 'Ja\'Marr Chase':
+      url = "./bengals.png";
+      break;
+
+    case 'Tyreek Hill':
+      url = "./dolphins.png";
+      break;
+
+    case 'Stefon Diggs':
+      url = "./bills.png";
+      break;
+
+    case 'A.J. Brown':
+      url = "./philadelphia-eagles-logo.png";
+      break;
+
+    case 'CeeDee Lamb':
+      url = "./cowboys.png";
+      break;
+
+    case 'Davante Adams':
+      url = "./raiders.png";
+      break;
+
+    case 'Amon-Ra St. Brown':
+      url = "./lions.png";
+      break;
+
+    case 'Jaylen Waddle':
+      url = "./dolphins.png";
+      break;
+
+    case 'Garrett Wilson':
+      url = "./jets.png";
+      break;
+
+    case 'Chris Olave':
+      url = "./saints/png";
+      break;
+
+    default:
+      url = "./nfl-nike-logo-logodownload-download-logotipos-21.png";
+      break;
+    }
+    
+    return url;
+  }
+
+//find tight end url for logo
+
+const findTeUrl = (player) => {
+
+  let url;
+  
+  switch (player) {
+    case 'Travis Kelcie':
+      url = "./chiefs.png";
+      break;
+
+    case 'Mark Andrews':
+      url = "./ravens.png";
+      break;
+
+    case 'T.J. Hockenson':
+      url = "./lions.png";
+      break;
+
+    case 'Kyle Pitts':
+      url = "./falcons.png";
+      break;
+
+    case 'George Kittle':
+      url = "./49ers.png";
+      break;
+
+    case 'Dallas Goedert':
+      url = "./philadelphia-eagles-logo.png";
+      break;
+
+    case 'Pat Freiermuth':
+      url = "./steelers.png";
+      break;
+
+    case 'Darren Waller':
+      url = "./raiders.png";
+      break;
+
+    case 'David Njoku':
+      url = "./browns.png";
+      break;
+
+    case 'Evan Engram':
+      url = "./giants.png";
+      break;
+
+    case 'Tyler Higbee':
+      url = "./rams.png";
+      break;
+
+    case 'Chigoziem Okonkwo':
+      url = "./titans/png";
+      break;
+
+    default:
+      url = "./nfl-nike-logo-logodownload-download-logotipos-21.png";
+      break;
+    }
+    
+    return url;
+  }
+
+//find kicker url for logo
+
+const findKickerUrl = (player) => {
+
+  let url;
+  
+  switch (player) {
+    case 'Justin Tucker':
+      url = "./ravens.png";
+      break;
+
+    case 'Tyler Bass':
+      url = "./bills.png";
+      break;
+
+    case 'Daniel Carlson':
+      url = "./raiders.png";
+      break;
+
+    case 'Harrison Butker':
+      url = "./chiefs.png";
+      break;
+
+    case 'Younghoe Koo':
+      url = "./falcons.png";
+      break;
+
+    case 'Nick Folk':
+      url = "./patriots.png";
+      break;
+
+    case 'Jason Sanders':
+      url = "./dolphins.png";
+      break;
+
+    case 'Robbie Gould':
+      url = "./49ers.png";
+      break;
+
+    case 'Brandon McManus':
+      url = "./jaguars.png";
+      break;
+
+    case 'Ryan Succop':
+      url = "./bucs.png";
+      break;
+
+    case 'Matt Gay':
+      url = "./colts.png";
+      break;
+
+    case 'Jake Elliott':
+      url = "./philadelphia-eagles-logo.png";
+      break;
+
+    default:
+      url = "./nfl-nike-logo-logodownload-download-logotipos-21.png";
+      break;
+    }
+    
+    return url;
+  }
+
+//find team defense url for logo
+
+
+const findDefUrl = (player) => {
+
+  let url;
+  
+  switch (player) {
+    case '49ers':
+      url = "./49ers.png";
+      break;
+
+    case 'Cowboys':
+      url = "./cowboys.png";
+      break;
+
+    case 'Eagles':
+      url = "./philadelphia-eagles-logo.png";
+      break;
+
+    case 'Patriots':
+      url = "./patriots.png";
+      break;
+
+    case 'Bills':
+      url = "./bills.png";
+      break;
+
+    case 'Jets':
+      url = "./jets.png";
+      break;
+
+    case 'Ravens':
+      url = "./ravens.png";
+      break;
+
+    case 'Jaguars':
+      url = "./jaguars.png";
+      break;
+
+    case 'Steelers':
+      url = "./steelers.png";
+      break;
+
+    case 'Chiefs':
+      url = "./chiefs.png";
+      break;
+
+    case 'Dolphins':
+      url = "./dolphins.png";
+      break;
+
+    case 'Broncos':
+      url = "./broncos.png";
+      break;
+
+    default:
+      url = "./nfl-nike-logo-logodownload-download-logotipos-21.png";
+      break;
+    }
+    
+    return url;
+  }
+
 //image changing functions
 
 const rollbackImg = (element) => {
-  element.src = './nfl-nike-logo-logodownload-download-logotipos-21.png';
+  element.src = "./nfl-nike-logo-logodownload-download-logotipos-21.png";
 }
+
+//img adding functions
 
 const newImgQb = (element, player) => {
   const url = findQbUrl(player);
@@ -309,390 +696,6 @@ const newImgD = (element, player) => {
   const url = findDefUrl(player);
   element.src = url;
 }
-
-
-
-
-
-//find quarterback url for logo update
-
-const findQbUrl = (player) => {
-
-  let url;
-  
-  switch (player) {
-    case 'Josh Allen':
-      url = './bills.png';
-      break;
-
-    case 'Patrick Mahomes':
-      url = './chiefs.png';
-      break;
-
-    case 'Jalen Hurts':
-      url = './philadelphia-eagles-logo.png';
-      break;
-
-    case 'Lamar Jackson':
-      url = './ravens.png';
-      break;
-
-    case 'Joe Burrow':
-      url = './bengals.png';
-      break;
-
-    case 'Justin Herbert':
-      url = './chargers.png';
-      break;
-
-    case 'Justin Fields':
-      url = './bears.png';
-      break;
-
-    case 'Daniel Jones':
-      url = './giants.png';
-      break;
-
-    case 'Trevor Lawrence':
-      url = './jaguars.png';
-      break;
-
-    case 'Deshaun Watson':
-      url = './browns.png';
-      break;
-
-    case 'Geno Smith':
-      url = './seahawks.png';
-      break;
-
-    case 'Dak Prescott':
-      url = './cowboys.png';
-      break;
-
-    default:
-      url = './nfl-nike-logo-logodownload-download-logotipos-21.png'
-      break;
-    }
-    
-    return url;
-  }
-
-//find running back url for logo
-
-const findRbUrl = (player) => {
-
-  let url;
-  
-  switch (player) {
-    case 'Christian McCaffrey':
-      url = './49ers.png';
-      break;
-
-    case 'Austin Ekeler':
-      url = './chargers.png';
-      break;
-
-    case 'Josh Jacobs':
-      url = './raiders.png';
-      break;
-
-    case 'Nick Chubb':
-      url = './browns.png';
-      break;
-
-    case 'Derrick Henry':
-      url = './titans.png';
-      break;
-
-    case 'Tony Pollard':
-      url = './cowboys.png';
-      break;
-
-    case 'Saquon Barkley':
-      url = './giants.png';
-      break;
-
-    case 'Bijan Robinson':
-      url = './falcons.png';
-      break;
-
-    case 'Rhamondre Stevenson':
-      url = './patriots.png';
-      break;
-
-    case 'Jonathon Taylor':
-      url = './colts.png';
-      break;
-
-    case 'Breece Hall':
-      url = './jets.png';
-      break;
-
-    case 'Joe Mixon':
-      url = './bengals.png';
-      break;
-
-    default:
-      url = './nfl-nike-logo-logodownload-download-logotipos-21.png'
-      break;
-    }
-    
-    return url;
-  }
-
-//find wide receiver url for logo
-
-const findWrUrl = (player) => {
-
-  let url;
-  
-  switch (player) {
-    case 'Justin Jefferson':
-      url = './vikings.png';
-      break;
-
-    case 'Cooper Kupp':
-      url = './rams.png';
-      break;
-
-    case 'Ja\'Marr Chase':
-      url = './bengals.png';
-      break;
-
-    case 'Tyreek Hill':
-      url = './dolphins.png';
-      break;
-
-    case 'Stefon Diggs':
-      url = './bills.png';
-      break;
-
-    case 'A.J. Brown':
-      url = './philadelphia-eagles-logo.png';
-      break;
-
-    case 'CeeDee Lamb':
-      url = './cowboys.png';
-      break;
-
-    case 'Davante Adams':
-      url = './raiders.png';
-      break;
-
-    case 'Amon-Ra St. Brown':
-      url = './lions.png';
-      break;
-
-    case 'Jaylen Waddle':
-      url = './dolphins.png';
-      break;
-
-    case 'Garrett Wilson':
-      url = './jets.png';
-      break;
-
-    case 'Chris Olave':
-      url = './saints/png';
-      break;
-
-    default:
-      url = './nfl-nike-logo-logodownload-download-logotipos-21.png'
-      break;
-    }
-    
-    return url;
-  }
-
-//find tight end url for logo
-
-const findTeUrl = (player) => {
-
-  let url;
-  
-  switch (player) {
-    case 'Travis Kelcie':
-      url = './chiefs.png';
-      break;
-
-    case 'Mark Andrews':
-      url = './ravens.png';
-      break;
-
-    case 'T.J. Hockenson':
-      url = './lions.png';
-      break;
-
-    case 'Kyle Pitts':
-      url = './falcons.png';
-      break;
-
-    case 'George Kittle':
-      url = './49ers.png';
-      break;
-
-    case 'Dallas Goedert':
-      url = './philadelphia-eagles-logo.png';
-      break;
-
-    case 'Pat Freiermuth':
-      url = './steelers.png';
-      break;
-
-    case 'Darren Waller':
-      url = './raiders.png';
-      break;
-
-    case 'David Njoku':
-      url = './browns.png';
-      break;
-
-    case 'Evan Engram':
-      url = './giants.png';
-      break;
-
-    case 'Tyler Higbee':
-      url = './rams.png';
-      break;
-
-    case 'Chigoziem Okonkwo':
-      url = './titans/png';
-      break;
-
-    default:
-      url = './nfl-nike-logo-logodownload-download-logotipos-21.png'
-      break;
-    }
-    
-    return url;
-  }
-
-//find kicker url for logo
-
-const findKickerUrl = (player) => {
-
-  let url;
-  
-  switch (player) {
-    case 'Justin Tucker':
-      url = './ravens.png';
-      break;
-
-    case 'Tyler Bass':
-      url = './bills.png';
-      break;
-
-    case 'Daniel Carlson':
-      url = './raiders.png';
-      break;
-
-    case 'Harrison Butker':
-      url = './chiefs.png';
-      break;
-
-    case 'Younghoe Koo':
-      url = './falcons.png';
-      break;
-
-    case 'Nick Folk':
-      url = './patriots.png';
-      break;
-
-    case 'Jason Sanders':
-      url = './dolphins.png';
-      break;
-
-    case 'Robbie Gould':
-      url = './49ers.png';
-      break;
-
-    case 'Brandon McManus':
-      url = './jaguars.png';
-      break;
-
-    case 'Ryan Succop':
-      url = './bucs.png';
-      break;
-
-    case 'Matt Gay':
-      url = './colts.png';
-      break;
-
-    case 'Jake Elliott':
-      url = './philadelphia-eagles-logo.png';
-      break;
-
-    default:
-      url = './nfl-nike-logo-logodownload-download-logotipos-21.png'
-      break;
-    }
-    
-    return url;
-  }
-
-//find team defense url for logo
-
-
-const findDefUrl = (player) => {
-
-  let url;
-  
-  switch (player) {
-    case '49ers':
-      url = './49ers.png';
-      break;
-
-    case 'Cowboys':
-      url = './cowboys.png';
-      break;
-
-    case 'Eagles':
-      url = './philadelphia-eagles-logo.png';
-      break;
-
-    case 'Patriots':
-      url = './patriots.png';
-      break;
-
-    case 'Bills':
-      url = './bills.png';
-      break;
-
-    case 'Jets':
-      url = './jets.png';
-      break;
-
-    case 'Ravens':
-      url = './ravens.png';
-      break;
-
-    case 'Jaguars':
-      url = './jaguars.png';
-      break;
-
-    case 'Steelers':
-      url = './steelers.png';
-      break;
-
-    case 'Chiefs':
-      url = './chiefs.png';
-      break;
-
-    case 'Dolphins':
-      url = './dolphins.png';
-      break;
-
-    case 'Broncos':
-      url = './broncos.png';
-      break;
-
-    default:
-      url = './nfl-nike-logo-logodownload-download-logotipos-21.png'
-      break;
-    }
-    
-    return url;
-  }
-
 
 // Generate lineup and image function
 
