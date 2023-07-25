@@ -521,7 +521,7 @@ const findTeUrl = (player) => {
       break;
 
     case 'Chigoziem Okonkwo':
-      url = "./titans/png";
+      url = "./titans.png";
       break;
 
     default:
