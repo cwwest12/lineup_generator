@@ -280,9 +280,39 @@ const rollbackImg = (element) => {
   element.src = './nfl-nike-logo-logodownload-download-logotipos-21.png';
 }
 
-const newImg = (element, url) => {
+const newImgQb = (element, player) => {
+  const url = findQbUrl(player);
   element.src = url;
 }
+
+const newImgRb = (element, player) => {
+  const url = findRbUrl(player);
+  element.src = url;
+}
+
+const newImgWr = (element, player) => {
+  const url = findWrUrl(player);
+  element.src = url;
+}
+
+const newImgTe = (element, player) => {
+  const url = findTeUrl(player);
+  element.src = url;
+}
+
+const newImgK = (element, player) => {
+  const url = findKickerUrl(player);
+  element.src = url;
+}
+
+const newImgD = (element, player) => {
+  const url = findDefUrl(player);
+  element.src = url;
+}
+
+
+
+
 
 //find quarterback url for logo update
 
@@ -726,6 +756,16 @@ const generateAndDisplayLineup = () => {
   rollbackImg(teBoxImg);
   rollbackImg(kickerBoxImg);
   rollbackImg(defenseBoxImg);
+
+  newImgQb(qbBoxImg, randomQbsArr[0]);
+  newImgRb(rbBoxOneImg, randomRbsArr[0]);
+  newImgRb(rbBoxTwoImg, randomRbsArr[1]);
+  newImgWr(wrBoxOneImg, randomWrsArr[0]);
+  newImgWr(wrBoxTwoImg, randomWrsArr[1]);
+  newImgWr(wrBoxThreeImg, randomWrsArr[2]);
+  newImgTe(teBoxImg, randomTesArr[0]);
+  newImgK(kickerBoxImg, randomKickerArr[0]);
+  newImgD(defenseBoxImg, randomDefenseArr[0]);
   
 };
 
