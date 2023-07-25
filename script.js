@@ -41,7 +41,7 @@ const wideReceivers = [
   { name: 'Davante Adams', rank: 8, adp: 7, risk_level: 0, scheduleStrength: 4 },
   { name: 'Amon-Ra St. Brown', rank: 9, adp: 9.5, risk_level: 0, scheduleStrength: 3 },
   { name: 'Jaylen Waddle', rank: 10, adp: 10.5, risk_level: 1, scheduleStrength: 4 },
-  { name: 'Garret Wilson', rank: 11, adp: 10, risk_level: 1, scheduleStrength: 3 },
+  { name: 'Garrett Wilson', rank: 11, adp: 10, risk_level: 1, scheduleStrength: 3 },
   { name: 'Chris Olave', rank: 12, adp: 13.5, risk_level: 1, scheduleStrength: 4 }
 ];
 
@@ -458,7 +458,7 @@ const findWrUrl = (player) => {
       break;
 
     case 'Chris Olave':
-      url = "./saints/png";
+      url = "./saints.png";
       break;
 
     default:
