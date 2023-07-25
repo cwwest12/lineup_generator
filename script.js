@@ -386,7 +386,7 @@ const findRbUrl = (player) => {
       url = "./patriots.png";
       break;
 
-    case 'Jonathon Taylor':
+    case 'Jonathan Taylor':
       url = "./colts.png";
       break;
 
