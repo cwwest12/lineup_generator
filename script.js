@@ -476,7 +476,7 @@ const findTeUrl = (player) => {
   let url;
   
   switch (player) {
-    case 'Travis Kelcie':
+    case 'Travis Kelce':
       url = "./chiefs.png";
       break;
 
