@@ -434,35 +434,35 @@ const findWrUrl = (player) => {
       break;
 
     case 'Stefon Diggs':
-      url = '';
+      url = './bills.png';
       break;
 
     case 'A.J. Brown':
-      url = '';
+      url = './philadelphia-eagles-logo.png';
       break;
 
-    case 'Saquon Barkley':
-      url = '';
+    case 'CeeDee Lamb':
+      url = './cowboys.png';
       break;
 
-    case 'Bijan Robinson':
-      url = '';
+    case 'Davante Adams':
+      url = './raiders.png';
       break;
 
-    case 'Rhamondre Stevenson':
-      url = '';
+    case 'Amon-Ra St. Brown':
+      url = './lions.png';
       break;
 
-    case 'Jonathon Taylor':
-      url = '';
+    case 'Jaylen Waddle':
+      url = './dolphins.png';
       break;
 
-    case 'Breece Hall':
-      url = '';
+    case 'Garrett Wilson':
+      url = './jets.png';
       break;
 
-    case 'Joe Mixon':
-      url = '';
+    case 'Chris Olave':
+      url = './saints/png';
       break;
 
     default:
