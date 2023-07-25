@@ -69,7 +69,7 @@ const kickers = [
   { name: 'Nick Folk', rank: 6, adp: 30, risk_level: 0, scheduleStrength: 3 },
   { name: 'Jason Sanders', rank: 7, adp: 22, risk_level: 0, scheduleStrength: 4 },
   { name: 'Robbie Gould', rank: 8, adp: 30, risk_level: 0, scheduleStrength: 3 },
-  { name: 'Brandon MacManus', rank: 9, adp: 22, risk_level: 0, scheduleStrength: 4 },
+  { name: 'Brandon McManus', rank: 9, adp: 22, risk_level: 0, scheduleStrength: 4 },
   { name: 'Ryan Succop', rank: 10, adp: 30, risk_level: 0, scheduleStrength: 3 },
   { name: 'Matt Gay', rank: 11, adp: 22, risk_level: 0, scheduleStrength: 4 },
   { name: 'Jake Elliott', rank: 12, adp: 30, risk_level: 0, scheduleStrength: 3 }
@@ -463,6 +463,196 @@ const findWrUrl = (player) => {
 
     case 'Chris Olave':
       url = './saints/png';
+      break;
+
+    default:
+      url = './nfl-nike-logo-logodownload-download-logotipos-21.png'
+      break;
+    }
+    
+    return url;
+  }
+
+//find tight end url for logo
+
+const findTeUrl = (player) => {
+
+  let url;
+  
+  switch (player) {
+    case 'Travis Kelcie':
+      url = './chiefs.png';
+      break;
+
+    case 'Mark Andrews':
+      url = './ravens.png';
+      break;
+
+    case 'T.J. Hockenson':
+      url = './lions.png';
+      break;
+
+    case 'Kyle Pitts':
+      url = './falcons.png';
+      break;
+
+    case 'George Kittle':
+      url = './49ers.png';
+      break;
+
+    case 'Dallas Goedert':
+      url = './philadelphia-eagles-logo.png';
+      break;
+
+    case 'Pat Freiermuth':
+      url = './steelers.png';
+      break;
+
+    case 'Darren Waller':
+      url = './raiders.png';
+      break;
+
+    case 'David Njoku':
+      url = './browns.png';
+      break;
+
+    case 'Evan Engram':
+      url = './giants.png';
+      break;
+
+    case 'Tyler Higbee':
+      url = './rams.png';
+      break;
+
+    case 'Chigoziem Okonkwo':
+      url = './titans/png';
+      break;
+
+    default:
+      url = './nfl-nike-logo-logodownload-download-logotipos-21.png'
+      break;
+    }
+    
+    return url;
+  }
+
+//find kicker url for logo
+
+const findKickerUrl = (player) => {
+
+  let url;
+  
+  switch (player) {
+    case 'Justin Tucker':
+      url = './ravens.png';
+      break;
+
+    case 'Tyler Bass':
+      url = './bills.png';
+      break;
+
+    case 'Daniel Carlson':
+      url = './raiders.png';
+      break;
+
+    case 'Harrison Butker':
+      url = './chiefs.png';
+      break;
+
+    case 'Younghoe Koo':
+      url = './falcons.png';
+      break;
+
+    case 'Nick Folk':
+      url = './patriots.png';
+      break;
+
+    case 'Jason Sanders':
+      url = './dolphins.png';
+      break;
+
+    case 'Robbie Gould':
+      url = './49ers.png';
+      break;
+
+    case 'Brandon McManus':
+      url = './jaguars.png';
+      break;
+
+    case 'Ryan Succop':
+      url = './bucs.png';
+      break;
+
+    case 'Matt Gay':
+      url = './colts.png';
+      break;
+
+    case 'Jake Elliott':
+      url = './philadelphia-eagles-logo.png';
+      break;
+
+    default:
+      url = './nfl-nike-logo-logodownload-download-logotipos-21.png'
+      break;
+    }
+    
+    return url;
+  }
+
+//find team defense url for logo
+
+
+const findDefUrl = (player) => {
+
+  let url;
+  
+  switch (player) {
+    case '49ers':
+      url = './49ers.png';
+      break;
+
+    case 'Cowboys':
+      url = './cowboys.png';
+      break;
+
+    case 'Eagles':
+      url = './philadelphia-eagles-logo.png';
+      break;
+
+    case 'Patriots':
+      url = './patriots.png';
+      break;
+
+    case 'Bills':
+      url = './bills.png';
+      break;
+
+    case 'Jets':
+      url = './jets.png';
+      break;
+
+    case 'Ravens':
+      url = './ravens.png';
+      break;
+
+    case 'Jaguars':
+      url = './jaguars.png';
+      break;
+
+    case 'Steelers':
+      url = './steelers.png';
+      break;
+
+    case 'Chiefs':
+      url = './chiefs.png';
+      break;
+
+    case 'Dolphins':
+      url = './dolphins.png';
+      break;
+
+    case 'Broncos':
+      url = './broncos.png';
       break;
 
     default:
